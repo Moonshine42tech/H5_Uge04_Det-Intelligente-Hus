@@ -27,9 +27,7 @@ ___
 
 ## Introduktion
 
-Det intelligente hus er en simplificeret repræsentation af hvad der er muligt at lave med embeded programmering og IoT.
-
-Dette project er en skole opgave som i teorien godt ville kunne inplementeres i et rigtigt smart home.
+Det intelligente hus er en simplificeret repræsentation af hvad der er muligt at lave med embeded programmering og IoT. Dette project er en skole opgave som i teorien godt ville kunne inplementeres i et rigtigt smart home.
 
 <p>
 <br/>
@@ -60,7 +58,7 @@ lav et "proof of concept" der kan demonstrere følgene krav.
         * En servo motor skal vise døren der åbner/lukker.
         * Døren skal kunne styres både vi app og via RFID kort/chip
         <br/>
-<br/>
+
 * Et 'stort display' der skal vise den sidste ændring det er sket i huset. f.eks "Stue lyd: OFF"
 
 * Relevante opsamlede data skal logges og gemmes, således at systemet fremover kan drage nytte af dem og foretage intelligente beslutninger.
