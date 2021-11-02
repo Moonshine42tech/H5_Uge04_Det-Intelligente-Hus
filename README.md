@@ -16,9 +16,8 @@ ___
 ## Indholdsfortegnelse
 
 * [Introduktion](#Introduktion)
-    * [Projectets formål](#Projectets_formål)
+    * [Projectets formål](#Projectets-formål)
 * [Anerkendelser](#Anerkendelser)
-
 
 <p>
 <br/>
