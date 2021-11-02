@@ -1,18 +1,14 @@
 <!-- PROJECT LOGO -->
-<p align="center">
+<div align="center">
+  <h1>Det Intelligente Hus</h1>
+  <p>EMBEDDED CONTROLLER III</p><br />
 
-  <h1 align="center">Det Intelligente Hus</h1>
-  <p align="center">EMBEDDED CONTROLLER III</p><br />
-
-  <a>
-    <img src="Billeder/Floor plan.png" alt="Logo" width="480" height="360">
-  </a>
-</p>
+  <img src="Billeder/Floor plan.png" alt="Floor plan" width="480" height="360">
+</div>
 
 <p>
 <br/>
 </p>
-
 
 ___
 
@@ -20,6 +16,7 @@ ___
 
 * [Introduktion](#Introduktion)
     * [Projectets formål](#Projectets-formål)
+* [Functionelle & non-functionelle krav](#Functionelle-&-non-functionelle-krav)
 * [Anerkendelse](#Anerkendelse)
 
 <p>
@@ -46,7 +43,7 @@ Det intiligente hus er et skoleproject der har til formål at vise underviseren 
 <br/>
 </p>
 
-## Functionelle & non-functionelle krav.
+## Functionelle & non-functionelle krav
 
 lav et "proof of concept" der kan demonstrere følgene krav. 
 
