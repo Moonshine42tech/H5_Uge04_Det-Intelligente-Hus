@@ -17,6 +17,8 @@ ___
 * [Introduktion](#Introduktion)
     * [Projectets formål](#Projectets-formål)
 * [Functionelle og non-functionelle krav](#Functionelle-og-non-functionelle-krav)
+* [Brugsvejledning](#Brugsvejledning)
+    * [Setup](#Setup)
 * [Anerkendelse](#Anerkendelse)
 
 <p>
@@ -27,7 +29,7 @@ ___
 
 ## Introduktion
 
-Det intelligente hus er en simplificeret repræsentation af hvad der er muligt at lave med embeded programmering og IoT. Dette project er en skole opgave som i teorien godt ville kunne inplementeres i et rigtigt smart home.
+Det intelligente hus er en simplificeret repræsentation af hvad der er muligt at lave med embeded programmering og IoT. Dette project er en skole opgave som i teorien godt ville kunne inplementeres i et rigtigt smart home. 
 
 <p>
 <br/>
@@ -44,6 +46,8 @@ Det intiligente hus er et skoleproject der har til formål at vise underviseren 
 ## Functionelle og non-functionelle krav
 
 lav et "proof of concept" der kan demonstrere følgene krav. 
+
+* Sikkerhed skal være indtænkt overalt.
 
 * Fjernstyring af forskellige funktioner.
 
@@ -70,6 +74,11 @@ lav et "proof of concept" der kan demonstrere følgene krav.
 </p>
 
 ## Brugsvejledning
+............<br/>
+..................<br/>
+.............<br/>
+
+### Setup
 ............<br/>
 ..................<br/>
 .............<br/>
