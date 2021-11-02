@@ -1,17 +1,18 @@
 <!-- PROJECT LOGO -->
 <p align="center">
 
-  
-  <h3 align="center">Det Intelligente Hus</h3>
-
-  <p align="center">
-    EMBEDDED CONTROLLER III, <br /><br />
-  </p>
+  <h1 align="center">Det Intelligente Hus</h1>
+  <p align="center">EMBEDDED CONTROLLER III</p><br />
 
   <a>
     <img src="Billeder/Floor plan.png" alt="Logo" width="480" height="360">
   </a>
 </p>
+
+<p>
+<br/>
+</p>
+
 
 ___
 
@@ -47,24 +48,33 @@ Det intiligente hus er et skoleproject der har til formål at vise underviseren 
 
 ## Functionelle & non-functionelle krav.
 
-lav et Proof of Concept der kan demonstrere følgene muligheder. 
+lav et "proof of concept" der kan demonstrere følgene krav. 
 
 * Fjernstyring af forskellige funktioner.
 
     * Lys i de forkællige rum skal kunne styres via en app.
 
-    * Alle alarmer skal aktivere en "alarm lyd". men skal kunne deaktiveret både trådløst og ved fysist at trykke på en knap.
- 
+    * Alle alarmer skal aktivere en "alarm lyd". men skal kunne deaktiveres både trådløst og ved fysist at trykke på en knap.
+
+    * Hoveddøren: <br/>
+    En RFID kort/chip skal fungere som en nøjle til huset. 
+        * Rød led for låst dør .
+        * Grøn led for u-låst dør.
+        * En servo motor skal vise døren der åbner/lukker.
+        * Døren skal kunne styres både vi app og via RFID kort/chip
+        <br/>
+<br/>
+* Et 'stort display' der skal vise den sidste ændring det er sket i huset. f.eks "Stue lyd: OFF"
+
 * Relevante opsamlede data skal logges og gemmes, således at systemet fremover kan drage nytte af dem og foretage intelligente beslutninger.
 
-* De opsamlede data skal, i App Programmering III faget, kunne præseteres i en mobil app.
-
-I denne fase kommunikeres der med et WebAPI, hvilket giver muligheder for intelligent styring og dataopsamling.
-
+* De opsamlede data skal, i 'App Programmering 3' faget, kunne præseteres i en mobil app.
 
 <p>
 <br/>
 </p>
+
+___
 
 ## Anerkendelse
 
