@@ -20,7 +20,8 @@ ___
 * [Brugsvejledning](#Brugsvejledning)
     * [Setup](#Setup)
         * [Thingspeak](#Thingspeak)
-        * [MQTT Clienter](#MQTT-Clienter)
+        * [Computer Client](#MQTTX-(Computer-Client))
+        * [Android Mobil Client](#MQTT-Test-(Android-Mobil-Client))
 * [Anerkendelse](#Anerkendelse)
 
 <p>
@@ -83,31 +84,39 @@ Disse kontrol functioer vil senere blive inplementeret ind i en app for lettere 
 
 ### Setup
 ..................<br/>
-.............<br/><br/>
+.............<br/>
 
-#### Thingspeak
+<p>
+<br/>
+</p>
+
+### Thingspeak
 Thingspeak er systemets 'Broker' og står for alt routing i systemet. 
 For at sette thingspeak ordenligt op så bør du først læse denne guide, der forteller dig hvad du behøver og hvordan der gøres. <br/> 
 ```
 Dokumenter/Setup thingspeak.rtf
 ```
-<br/> 
-
-#### MQTT Clienter
-.......<br/>
-..........<br/><br/>
-
-##### MQTTX (Computer Client)
-.......<br/>
-..........<br/><br/>
-
-##### MQTT Test (Mobil Client)
-.......<br/>
-..........<br/><br/>
-
-
 <p>
 <br/>
+</p>
+
+### MQTTX (Computer Client)
+An Elegant Cross-platform MQTT 5.0 Desktop Client<br/>
+
+[Find programmet her!](https://mqttx.app/)
+
+<p>
+<br/><br/>
+</p>
+
+
+### MQTT Test (Android Mobil Client)
+'MQTT Test' bruger MQTT Client protokol til at forbinde MQTT server. Du kan blant andet oprette 3 forbindelser for at forbinde 3 forskellige servere på samme tid, og grænsefladen er intuitiv.<br/>
+
+[Find appen her!](https://play.google.com/store/apps/details?id=org.thinhlt.mqtttesttool&hl=da&gl=US)
+
+<p>
+<br/><br/>
 </p>
 
 ___
