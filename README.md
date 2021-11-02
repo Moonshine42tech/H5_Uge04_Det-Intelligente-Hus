@@ -1,14 +1,16 @@
 <!-- PROJECT LOGO -->
 <p align="center">
-  <a>
-    <img src="Billeder/hus.jpg" alt="Logo" width="360" height="160">
-  </a>
+
   
   <h3 align="center">Det Intelligente Hus</h3>
 
   <p align="center">
     EMBEDDED CONTROLLER III, <br /><br />
   </p>
+
+  <a>
+    <img src="Billeder/Floor plan.png" alt="Logo" width="480" height="360">
+  </a>
 </p>
 
 ___
@@ -17,7 +19,7 @@ ___
 
 * [Introduktion](#Introduktion)
     * [Projectets formål](#Projectets-formål)
-* [Anerkendelser](#Anerkendelser)
+* [Anerkendelse](#Anerkendelse)
 
 <p>
 <br/>
@@ -45,13 +47,26 @@ Det intiligente hus er et skoleproject der har til formål at vise underviseren 
 
 ## Functionelle & non-functionelle krav.
 
+lav et Proof of Concept der kan demonstrere følgene muligheder. 
+
+* Fjernstyring af forskellige funktioner.
+
+    * Lys i de forkællige rum skal kunne styres via en app.
+
+    * Alle alarmer skal aktivere en "alarm lyd". men skal kunne deaktiveret både trådløst og ved fysist at trykke på en knap.
+ 
+* Relevante opsamlede data skal logges og gemmes, således at systemet fremover kan drage nytte af dem og foretage intelligente beslutninger.
+
+* De opsamlede data skal, i App Programmering III faget, kunne præseteres i en mobil app.
+
+I denne fase kommunikeres der med et WebAPI, hvilket giver muligheder for intelligent styring og dataopsamling.
 
 
 <p>
 <br/>
 </p>
 
-## Anerkendelser
+## Anerkendelse
 
 Dette project eksistere grundet disse menesker:
 
