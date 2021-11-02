@@ -69,6 +69,15 @@ lav et "proof of concept" der kan demonstrere følgene krav.
 <br/>
 </p>
 
+## Brugsvejledning
+............<br/>
+..................<br/>
+.............<br/>
+
+<p>
+<br/>
+</p>
+
 ___
 
 ## Anerkendelse
