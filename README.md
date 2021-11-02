@@ -19,6 +19,8 @@ ___
 * [Functionelle og non-functionelle krav](#Functionelle-og-non-functionelle-krav)
 * [Brugsvejledning](#Brugsvejledning)
     * [Setup](#Setup)
+        * [Thingspeak](#Thingspeak)
+        * [MQTT Clienter](#MQTT-Clienter)
 * [Anerkendelse](#Anerkendelse)
 
 <p>
@@ -29,7 +31,7 @@ ___
 
 ## Introduktion
 
-Det intelligente hus er en simplificeret repræsentation af hvad der er muligt at lave med embeded programmering og IoT. Dette project er en skole opgave som i teorien godt ville kunne inplementeres i et rigtigt smart home. 
+Det intelligente hus er en simplificeret repræsentation af hvad der er muligt at lave med embeded programmering og IoT. Dette project er en skole opgave, som i teorien godt ville kunne inplementeres i et rigtigt smart home. 
 
 <p>
 <br/>
@@ -74,14 +76,35 @@ lav et "proof of concept" der kan demonstrere følgene krav.
 </p>
 
 ## Brugsvejledning
-............<br/>
-..................<br/>
-.............<br/>
+
+Intil 'App Programmering 3' faget starter. vil alle fjernstyret User-Interfaces/componenter blive styret via en eller flere MQTT clienter. 
+
+Disse kontrol functioer vil senere blive inplementeret ind i en app for lettere brug og kontrol.
 
 ### Setup
-............<br/>
 ..................<br/>
-.............<br/>
+.............<br/><br/>
+
+#### Thingspeak
+Thingspeak er systemets 'Broker' og står for alt routing i systemet. 
+For at sette thingspeak ordenligt op så bør du først læse denne guide, der forteller dig hvad du behøver og hvordan der gøres. <br/> 
+```
+Dokumenter/Setup thingspeak.rtf
+```
+<br/> 
+
+#### MQTT Clienter
+.......<br/>
+..........<br/><br/>
+
+##### MQTTX (Computer Client)
+.......<br/>
+..........<br/><br/>
+
+##### MQTT Test (Mobil Client)
+.......<br/>
+..........<br/><br/>
+
 
 <p>
 <br/>
