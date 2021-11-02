@@ -82,6 +82,10 @@ Intil 'App Programmering 3' faget starter. vil alle fjernstyret User-Interfaces/
 
 Disse kontrol functioer vil senere blive inplementeret ind i en app for lettere brug og kontrol.
 
+<p>
+<br/>
+</p>
+
 ### Setup
 ..................<br/>
 .............<br/>
@@ -114,6 +118,14 @@ An Elegant Cross-platform MQTT 5.0 Desktop Client<br/>
 'MQTT Test' bruger MQTT Client protokol til at forbinde MQTT server. Du kan blant andet oprette 3 forbindelser for at forbinde 3 forskellige servere på samme tid, og grænsefladen er intuitiv.<br/>
 
 [Find appen her!](https://play.google.com/store/apps/details?id=org.thinhlt.mqtttesttool&hl=da&gl=US)
+
+<p>
+<br/>
+</p>
+
+## Hardware
+..................<br/>
+.............<br/>
 
 <p>
 <br/><br/>
