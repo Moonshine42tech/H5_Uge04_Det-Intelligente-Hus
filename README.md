@@ -16,7 +16,7 @@ ___
 
 * [Introduktion](#Introduktion)
     * [Projectets formål](#Projectets-formål)
-* [Functionelle & non-functionelle krav](#Functionelle-&-non-functionelle-krav)
+* [Functionelle og non-functionelle krav](#Functionelle-og-non-functionelle-krav)
 * [Anerkendelse](#Anerkendelse)
 
 <p>
@@ -43,7 +43,7 @@ Det intiligente hus er et skoleproject der har til formål at vise underviseren 
 <br/>
 </p>
 
-## Functionelle & non-functionelle krav
+## Functionelle og non-functionelle krav
 
 lav et "proof of concept" der kan demonstrere følgene krav. 
 
