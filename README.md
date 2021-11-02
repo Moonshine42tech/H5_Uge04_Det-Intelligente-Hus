@@ -3,7 +3,7 @@
   <h1>Det Intelligente Hus</h1>
   <p>EMBEDDED CONTROLLER III</p><br />
 
-  <img src="Billeder/Floor plan.png" alt="Floor plan" width="480" height="360">
+  <img src="Billeder/Floor plan.png" alt="Floor plan" width="720" height="480">
 </div>
 
 <p>
