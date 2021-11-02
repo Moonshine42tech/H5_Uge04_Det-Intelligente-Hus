@@ -20,8 +20,8 @@ ___
 * [Brugsvejledning](#Brugsvejledning)
     * [Setup](#Setup)
         * [Thingspeak](#Thingspeak)
-        * [Computer Client](#MQTTX-(Computer-Client))
-        * [Android Mobil Client](#MQTT-Test-(Android-Mobil-Client))
+        * [Computer Client](#MQTTX-\(Computer-Client\))
+        * [Android Mobil Client](#MQTT-Test-\(Android-Mobil-Client\))
 * [Anerkendelse](#Anerkendelse)
 
 <p>
