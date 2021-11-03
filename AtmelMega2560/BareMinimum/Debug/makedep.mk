@@ -12,3 +12,7 @@ src\libraries\DHT-sensor-library\DHT_U.cpp
 
 src\libraries\SPI\src\SPI.cpp
 
+src\libraries\Wire\src\utility\twi.c
+
+src\libraries\Wire\src\Wire.cpp
+

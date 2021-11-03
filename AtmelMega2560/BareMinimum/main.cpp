@@ -3,6 +3,9 @@
 #include <DHT.h>
 #include <DHT_U.h>
 #include <SPI.h>
+#include <Wire.h>
+
+
 
 #pragma region DHT
 
@@ -12,17 +15,17 @@
 DHT_Unified dht(DHTPIN, DHTTYPE);
 uint32_t delayMS;
 
-String DhtSencorTemp = "";
-String DhtSencorHum = "";
+// Output holders
+int DhtSencorTemp;
+int DhtSencorHum;
 
 #pragma endregion DHT
-
-String StringBuilder = "";
 
 void setup()
 {
 	Serial.begin(9600);
-	
+	Wire.begin(); // join i2c bus (address optional for master)
+
 #pragma region DHT
 
 	// Initialize device.
@@ -33,13 +36,6 @@ void setup()
 	delayMS = sensor.min_delay / 1000;		// Set delay between sensor readings based on sensor details.
 	
 #pragma endregion DHT
-
-#pragma region SPI Marster
-
-	SPI.beginTransaction(SPISettings(16000000, MSBFIRST, SPI_MODE0));
-	SPI.begin();
-
-#pragma endregion SPI Marster
 
 }
 
@@ -62,11 +58,11 @@ void loop()
 	// set Temperature value
 	if (isnan(event.temperature))
 	{
-		DhtSencorTemp = "Error temperature!";
+		DhtSencorTemp = -1;
 	}
 	else
 	{
-		DhtSencorTemp = event.temperature;
+		DhtSencorTemp = (long)event.temperature;
 	}
 
 #pragma endregion DHT Temperature
@@ -79,11 +75,11 @@ void loop()
 	// set Humidity value
 	if (isnan(event.relative_humidity))
 	{
-		DhtSencorHum = "Error humidity!";
+		DhtSencorHum = -1;
 	}
 	else
 	{
-		DhtSencorHum = event.relative_humidity;
+		DhtSencorHum = (long)event.relative_humidity;
 	}
 	
 #pragma endregion DHT Humidity
@@ -91,21 +87,33 @@ void loop()
 #pragma endregion DHT
 
 	// Send values to MKR WIFI 110 board
-#pragma region MKR WIFI 110
+#pragma region Master Writer/Slave Receiver
 
-	// test output
-	Serial.println(DhtSencorHum);
-	StringBuilder = "Temperature: " + DhtSencorTemp + " Humidity: " + DhtSencorHum;
-	Serial.println(StringBuilder);
+	//// testing DHT11 sensor output in Terminal
+	//Serial.print("Temp: ");
+	//Serial.println(DhtSencorTemp);
+	//
+	//Serial.print("Hum: ");
+	//Serial.println(DhtSencorHum);
 
-#pragma region SPI
+  Wire.beginTransmission(1);		// transmit to device #1
+  
+  // Send Temp Data
+  Wire.write("Temp: ");        
+  Wire.write(DhtSencorTemp);         
+  
+  // Send Hum data
+  Wire.write("Hum: ");        
+  Wire.write(DhtSencorHum);         
+  
+  Wire.endTransmission();			// stop transmitting
+  
+#pragma endregion Master Writer/Slave Receiver
 
-  	digitalWrite(SS, LOW);				// enable Slave Select
-	SPI.transfer(StringBuilder);		// Transfer a string
-  	digitalWrite(SS, HIGH);				// disable Slave Select
+#pragma region RFID lår (Hoveddør)
 
-#pragma endregion SPI
+	//...
 
-	
-#pragma endregion MKR WIFI 110
+#pragma endregion RFID lår (Hoveddør)
+
 }

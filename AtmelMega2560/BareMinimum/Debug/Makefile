@@ -39,12 +39,18 @@ SUBDIRS :=  \
 ../include/libraries/DHT-sensor-library/ \
 ../include/libraries/SPI/ \
 ../include/libraries/SPI/src/ \
+../include/libraries/Wire/ \
+../include/libraries/Wire/src/ \
+../include/libraries/Wire/src/utility/ \
 ../src/ \
 ../src/libraries/ \
 ../src/libraries/Adafruit_Unified_Sensor/ \
 ../src/libraries/DHT-sensor-library/ \
 ../src/libraries/SPI/ \
-../src/libraries/SPI/src/
+../src/libraries/SPI/src/ \
+../src/libraries/Wire/ \
+../src/libraries/Wire/src/ \
+../src/libraries/Wire/src/utility/
 
 
 # Add inputs and outputs from these tool invocations to the build variables 
@@ -53,7 +59,9 @@ C_SRCS +=  \
 ../src/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.cpp \
 ../src/libraries/DHT-sensor-library/DHT.cpp \
 ../src/libraries/DHT-sensor-library/DHT_U.cpp \
-../src/libraries/SPI/src/SPI.cpp
+../src/libraries/SPI/src/SPI.cpp \
+../src/libraries/Wire/src/utility/twi.c \
+../src/libraries/Wire/src/Wire.cpp
 
 
 PREPROCESSING_SRCS += 
@@ -67,28 +75,36 @@ main.o \
 src/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.o \
 src/libraries/DHT-sensor-library/DHT.o \
 src/libraries/DHT-sensor-library/DHT_U.o \
-src/libraries/SPI/src/SPI.o
+src/libraries/SPI/src/SPI.o \
+src/libraries/Wire/src/utility/twi.o \
+src/libraries/Wire/src/Wire.o
 
 OBJS_AS_ARGS +=  \
 main.o \
 src/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.o \
 src/libraries/DHT-sensor-library/DHT.o \
 src/libraries/DHT-sensor-library/DHT_U.o \
-src/libraries/SPI/src/SPI.o
+src/libraries/SPI/src/SPI.o \
+src/libraries/Wire/src/utility/twi.o \
+src/libraries/Wire/src/Wire.o
 
 C_DEPS +=  \
 main.d \
 src/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.d \
 src/libraries/DHT-sensor-library/DHT.d \
 src/libraries/DHT-sensor-library/DHT_U.d \
-src/libraries/SPI/src/SPI.d
+src/libraries/SPI/src/SPI.d \
+src/libraries/Wire/src/utility/twi.d \
+src/libraries/Wire/src/Wire.d
 
 C_DEPS_AS_ARGS +=  \
 main.d \
 src/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.d \
 src/libraries/DHT-sensor-library/DHT.d \
 src/libraries/DHT-sensor-library/DHT_U.d \
-src/libraries/SPI/src/SPI.d
+src/libraries/SPI/src/SPI.d \
+src/libraries/Wire/src/utility/twi.d \
+src/libraries/Wire/src/Wire.d
 
 OUTPUT_FILE_PATH +=AtmelMega2560.elf
 
@@ -108,35 +124,49 @@ LINKER_SCRIPT_DEP+=
 ./main.o: .././main.cpp
 	@echo Building file: $<
 	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108016 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\DHT-sensor-library" -I"..\include\libraries\Adafruit_Unified_Sensor" -I"..\include\libraries\SPI\src"  -Os -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108016 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\DHT-sensor-library" -I"..\include\libraries\Adafruit_Unified_Sensor" -I"..\include\libraries\SPI\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility"  -Os -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 src/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.o: ../src/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.cpp
 	@echo Building file: $<
 	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108016 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\DHT-sensor-library" -I"..\include\libraries\Adafruit_Unified_Sensor" -I"..\include\libraries\SPI\src"  -Os -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108016 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\DHT-sensor-library" -I"..\include\libraries\Adafruit_Unified_Sensor" -I"..\include\libraries\SPI\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility"  -Os -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 src/libraries/DHT-sensor-library/DHT.o: ../src/libraries/DHT-sensor-library/DHT.cpp
 	@echo Building file: $<
 	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108016 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\DHT-sensor-library" -I"..\include\libraries\Adafruit_Unified_Sensor" -I"..\include\libraries\SPI\src"  -Os -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108016 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\DHT-sensor-library" -I"..\include\libraries\Adafruit_Unified_Sensor" -I"..\include\libraries\SPI\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility"  -Os -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 src/libraries/DHT-sensor-library/DHT_U.o: ../src/libraries/DHT-sensor-library/DHT_U.cpp
 	@echo Building file: $<
 	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108016 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\DHT-sensor-library" -I"..\include\libraries\Adafruit_Unified_Sensor" -I"..\include\libraries\SPI\src"  -Os -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108016 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\DHT-sensor-library" -I"..\include\libraries\Adafruit_Unified_Sensor" -I"..\include\libraries\SPI\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility"  -Os -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 src/libraries/SPI/src/SPI.o: ../src/libraries/SPI/src/SPI.cpp
 	@echo Building file: $<
 	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108016 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\DHT-sensor-library" -I"..\include\libraries\Adafruit_Unified_Sensor" -I"..\include\libraries\SPI\src"  -Os -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108016 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\DHT-sensor-library" -I"..\include\libraries\Adafruit_Unified_Sensor" -I"..\include\libraries\SPI\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility"  -Os -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+src/libraries/Wire/src/utility/twi.o: ../src/libraries/Wire/src/utility/twi.c
+	@echo Building file: $<
+	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108016 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\DHT-sensor-library" -I"..\include\libraries\Adafruit_Unified_Sensor" -I"..\include\libraries\SPI\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility"  -Os -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu99 -std=gnu11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+src/libraries/Wire/src/Wire.o: ../src/libraries/Wire/src/Wire.cpp
+	@echo Building file: $<
+	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108016 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\DHT-sensor-library" -I"..\include\libraries\Adafruit_Unified_Sensor" -I"..\include\libraries\SPI\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility"  -Os -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
