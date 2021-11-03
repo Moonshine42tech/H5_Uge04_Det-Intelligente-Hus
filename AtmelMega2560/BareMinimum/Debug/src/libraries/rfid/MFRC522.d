@@ -1,4 +1,6 @@
-main.d main.o: .././main.cpp ..\\..\ArduinoCore\include\core/Arduino.h \
+src/libraries/rfid/MFRC522.d src/libraries/rfid/MFRC522.o: \
+ ../src/libraries/rfid/MFRC522.cpp \
+ ..\\..\ArduinoCore\include\core/Arduino.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdlib.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stddef.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdbool.h \
@@ -33,15 +35,7 @@ main.d main.o: .././main.cpp ..\\..\ArduinoCore\include\core/Arduino.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h \
  ..\\..\ArduinoCore\include\core/Arduino.h \
  ..\\..\ArduinoCore\include\variants\mega/pins_arduino.h \
- ..\include\libraries\Adafruit_Unified_Sensor/Adafruit_Sensor.h \
- ..\\..\ArduinoCore\include\core/Print.h \
- ..\include\libraries\DHT-sensor-library/DHT.h \
- ..\include\libraries\DHT-sensor-library/DHT_U.h \
- ..\include\libraries\SPI\src/SPI.h ..\include\libraries\Wire\src/Wire.h \
- ..\\..\ArduinoCore\include\core/Stream.h \
- ..\include\libraries\rfid/MFRC522.h \
- ..\include\libraries\Servo\src/Servo.h \
- ..\include\libraries\Servo\src/avr/ServoTimers.h
+ ..\include\libraries\rfid/MFRC522.h ..\include\libraries\SPI\src/SPI.h
 
 ..\\..\ArduinoCore\include\core/Arduino.h:
 
@@ -113,22 +107,6 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 
 ..\\..\ArduinoCore\include\variants\mega/pins_arduino.h:
 
-..\include\libraries\Adafruit_Unified_Sensor/Adafruit_Sensor.h:
-
-..\\..\ArduinoCore\include\core/Print.h:
-
-..\include\libraries\DHT-sensor-library/DHT.h:
-
-..\include\libraries\DHT-sensor-library/DHT_U.h:
-
-..\include\libraries\SPI\src/SPI.h:
-
-..\include\libraries\Wire\src/Wire.h:
-
-..\\..\ArduinoCore\include\core/Stream.h:
-
 ..\include\libraries\rfid/MFRC522.h:
 
-..\include\libraries\Servo\src/Servo.h:
-
-..\include\libraries\Servo\src/avr/ServoTimers.h:
+..\include\libraries\SPI\src/SPI.h:
