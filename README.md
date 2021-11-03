@@ -74,8 +74,7 @@ lav et "proof of concept" der kan demonstrere følgene krav.
     * Hoveddøren: <br/>
         * En RFID kort/chip skal fungere som en nøjle til huset. 
         * En servo motor skal vise døren der åbner/lukker.
-        * Døren skal kunne styres både trådløst (via MQTT) og via RFID kort/chip<br/>
-<br/>
+        * Døren skal kunne styres både trådløst (via MQTT) og via RFID kort/chip
 
 * Et 'stort display' der skal vise den sidste ændring det er sket i huset. f.eks "Stue lyd: OFF"
 
