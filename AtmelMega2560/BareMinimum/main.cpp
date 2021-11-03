@@ -2,7 +2,7 @@
 #include <Adafruit_Sensor.h>
 #include <DHT.h>
 #include <DHT_U.h>
-
+#include <SPI.h>
 
 #pragma region DHT
 
@@ -17,11 +17,13 @@ String DhtSencorHum = "";
 
 #pragma endregion DHT
 
+String StringBuilder = "";
+
 void setup()
 {
 	Serial.begin(9600);
 	
-#pragma region  DHT
+#pragma region DHT
 
 	// Initialize device.
 	dht.begin();
@@ -31,6 +33,13 @@ void setup()
 	delayMS = sensor.min_delay / 1000;		// Set delay between sensor readings based on sensor details.
 	
 #pragma endregion DHT
+
+#pragma region SPI Marster
+
+	SPI.beginTransaction(SPISettings(16000000, MSBFIRST, SPI_MODE0));
+	SPI.begin();
+
+#pragma endregion SPI Marster
 
 }
 
@@ -81,5 +90,22 @@ void loop()
 
 #pragma endregion DHT
 
+	// Send values to MKR WIFI 110 board
+#pragma region MKR WIFI 110
 
+	// test output
+	Serial.println(DhtSencorHum);
+	StringBuilder = "Temperature: " + DhtSencorTemp + " Humidity: " + DhtSencorHum;
+	Serial.println(StringBuilder);
+
+#pragma region SPI
+
+  	digitalWrite(SS, LOW);				// enable Slave Select
+	SPI.transfer(StringBuilder);		// Transfer a string
+  	digitalWrite(SS, HIGH);				// disable Slave Select
+
+#pragma endregion SPI
+
+	
+#pragma endregion MKR WIFI 110
 }

@@ -90,6 +90,7 @@
       <Value>%24(ProjectDir)\..\ArduinoCore\include\variants\mega</Value>
       <Value>..\include\libraries\DHT-sensor-library</Value>
       <Value>..\include\libraries\Adafruit_Unified_Sensor</Value>
+      <Value>..\include\libraries\SPI\src</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
   <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
@@ -120,6 +121,7 @@
       <Value>%24(ProjectDir)\..\ArduinoCore\include\variants\mega</Value>
       <Value>..\include\libraries\DHT-sensor-library</Value>
       <Value>..\include\libraries\Adafruit_Unified_Sensor</Value>
+      <Value>..\include\libraries\SPI\src</Value>
     </ListValues>
   </avrgcccpp.compiler.directories.IncludePaths>
   <avrgcccpp.compiler.optimization.level>Optimize for size (-Os)</avrgcccpp.compiler.optimization.level>
@@ -175,6 +177,7 @@
       <Value>%24(ProjectDir)\..\ArduinoCore\include\variants\mega</Value>
       <Value>..\include\libraries\DHT-sensor-library</Value>
       <Value>..\include\libraries\Adafruit_Unified_Sensor</Value>
+      <Value>..\include\libraries\SPI\src</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
   <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
@@ -205,6 +208,7 @@
       <Value>%24(ProjectDir)\..\ArduinoCore\include\variants\mega</Value>
       <Value>..\include\libraries\DHT-sensor-library</Value>
       <Value>..\include\libraries\Adafruit_Unified_Sensor</Value>
+      <Value>..\include\libraries\SPI\src</Value>
     </ListValues>
   </avrgcccpp.compiler.directories.IncludePaths>
   <avrgcccpp.compiler.optimization.level>Optimize for size (-Os)</avrgcccpp.compiler.optimization.level>
@@ -239,6 +243,9 @@
     <Compile Include="include\libraries\DHT-sensor-library\DHT_U.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="include\libraries\SPI\src\SPI.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="main.cpp">
       <SubType>compile</SubType>
     </Compile>
@@ -249,6 +256,9 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\libraries\DHT-sensor-library\DHT_U.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libraries\SPI\src\SPI.cpp">
       <SubType>compile</SubType>
     </Compile>
     <Content Include="readme.html">
@@ -266,10 +276,14 @@
     <Folder Include="include\libraries\" />
     <Folder Include="include\libraries\Adafruit_Unified_Sensor\" />
     <Folder Include="include\libraries\DHT-sensor-library\" />
+    <Folder Include="include\libraries\SPI\" />
+    <Folder Include="include\libraries\SPI\src\" />
     <Folder Include="src\" />
     <Folder Include="src\libraries\" />
     <Folder Include="src\libraries\Adafruit_Unified_Sensor\" />
     <Folder Include="src\libraries\DHT-sensor-library\" />
+    <Folder Include="src\libraries\SPI\" />
+    <Folder Include="src\libraries\SPI\src\" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
 </Project>

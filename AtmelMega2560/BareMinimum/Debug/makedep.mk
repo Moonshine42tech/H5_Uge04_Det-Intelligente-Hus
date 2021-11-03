@@ -10,3 +10,5 @@ src\libraries\DHT-sensor-library\DHT.cpp
 
 src\libraries\DHT-sensor-library\DHT_U.cpp
 
+src\libraries\SPI\src\SPI.cpp
+

@@ -1,4 +1,6 @@
-main.d main.o: .././main.cpp ..\\..\ArduinoCore\include\core/Arduino.h \
+src/libraries/SPI/src/SPI.d src/libraries/SPI/src/SPI.o: \
+ ../src/libraries/SPI/src/SPI.cpp ..\include\libraries\SPI\src/SPI.h \
+ ..\\..\ArduinoCore\include\core/Arduino.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdlib.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stddef.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdbool.h \
@@ -32,12 +34,9 @@ main.d main.o: .././main.cpp ..\\..\ArduinoCore\include\core/Arduino.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h \
  ..\\..\ArduinoCore\include\core/Arduino.h \
- ..\\..\ArduinoCore\include\variants\mega/pins_arduino.h \
- ..\include\libraries\Adafruit_Unified_Sensor/Adafruit_Sensor.h \
- ..\\..\ArduinoCore\include\core/Print.h \
- ..\include\libraries\DHT-sensor-library/DHT.h \
- ..\include\libraries\DHT-sensor-library/DHT_U.h \
- ..\include\libraries\SPI\src/SPI.h
+ ..\\..\ArduinoCore\include\variants\mega/pins_arduino.h
+
+..\include\libraries\SPI\src/SPI.h:
 
 ..\\..\ArduinoCore\include\core/Arduino.h:
 
@@ -108,13 +107,3 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 ..\\..\ArduinoCore\include\core/Arduino.h:
 
 ..\\..\ArduinoCore\include\variants\mega/pins_arduino.h:
-
-..\include\libraries\Adafruit_Unified_Sensor/Adafruit_Sensor.h:
-
-..\\..\ArduinoCore\include\core/Print.h:
-
-..\include\libraries\DHT-sensor-library/DHT.h:
-
-..\include\libraries\DHT-sensor-library/DHT_U.h:
-
-..\include\libraries\SPI\src/SPI.h:
