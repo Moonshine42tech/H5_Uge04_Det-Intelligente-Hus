@@ -68,9 +68,7 @@ lav et "proof of concept" der kan demonstrere følgene krav.
 
 * Et 'stort display' der skal vise den sidste ændring det er sket i huset. f.eks "Stue lyd: OFF"
 
-* Relevante opsamlede data skal logges og gemmes, således at systemet fremover kan drage nytte af dem og foretage intelligente beslutninger.
-
-* De opsamlede data skal, i 'App Programmering 3' faget, kunne præseteres i en mobil app.
+* Opsamlet data skal, i 'App Programmering 3' faget, kunne præseteres i en mobil app.
 
 <p>
 <br/>
