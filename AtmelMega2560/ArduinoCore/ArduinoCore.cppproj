@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>7.0</ProjectVersion>
     <ToolchainName>com.Atmel.AVRGCC8.CPP</ToolchainName>
-    <ProjectGuid>61b58233-254d-494b-a0e2-e170b956690e</ProjectGuid>
+    <ProjectGuid>73993a87-fff7-4917-bb2c-532c7650b15a</ProjectGuid>
     <avrdevice>atmega2560</avrdevice>
     <avrdeviceseries>none</avrdeviceseries>
     <OutputType>StaticLibrary</OutputType>

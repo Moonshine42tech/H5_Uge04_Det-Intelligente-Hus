@@ -4,15 +4,13 @@
   <p>EMBEDDED CONTROLLER III</p><br />
 
   <img src="Billeder/Floor plan.png" alt="Floor plan" width="720" height="480">
-</div>
+</div><br/>
 
 <p>
 <br/>
 </p>
 
-___
-
-## Indholdsfortegnelse
+# Indholdsfortegnelse
 
 * [Introduktion](#Introduktion)
     * [Projectets formål](#Projectets-formål)
@@ -30,9 +28,7 @@ ___
 <br/>
 </p>
 
-___
-
-## Introduktion
+# Introduktion
 
 Det intelligente hus er en simplificeret repræsentation af hvad der er muligt at lave med embeded programmering og IoT. Dette project er en skole opgave, som i teorien godt ville kunne inplementeres i et rigtigt home. 
 
@@ -40,7 +36,7 @@ Det intelligente hus er en simplificeret repræsentation af hvad der er muligt a
 <br/>
 </p>
 
-### Projectets formål
+## Projectets formål
 
 Det intiligente hus er et skoleproject der har til formål at vise underviseren ’Egon C. Rasmusen’. Hvad eleven ’Kasper Jacobsen’, har lært i løbet at det to ugers undervisning i ’EMBEDDED CONTROLLER III - IOT - S21DMH5B11’.
 
@@ -48,7 +44,7 @@ Det intiligente hus er et skoleproject der har til formål at vise underviseren 
 <br/>
 </p>
 
-### Godt at vide
+## Godt at vide
 
 * Der vil ikke blive inplimenteret en fysisk menu function i dette project, da der er sat fokus på at dette intelligente hus, kun skal kunne styres via en app. <br/>(appen kommer på et senere fag).
 
@@ -63,7 +59,7 @@ Det intiligente hus er et skoleproject der har til formål at vise underviseren 
 <br/>
 </p>
 
-## Functionelle og non-functionelle krav
+# Functionelle og non-functionelle krav
 
 lav et "proof of concept" der kan demonstrere følgene krav. 
 
@@ -87,7 +83,7 @@ lav et "proof of concept" der kan demonstrere følgene krav.
 <br/>
 </p>
 
-### Fremtidige kvav 
+## Fremtidige kvav 
 
 * Lys i de forkællige rum skal kunne styres via en app.
 
@@ -97,7 +93,7 @@ lav et "proof of concept" der kan demonstrere følgene krav.
 <br/>
 </p>
 
-## Brugsvejledning
+# Brugsvejledning
 
 Intil 'App Programmering 3' faget starter. vil alle fjernstyret User-Interfaces/componenter blive styret via en eller flere MQTT clienter. 
 
@@ -107,7 +103,7 @@ Disse kontrol functioer vil senere blive inplementeret ind i en app for lettere 
 <br/>
 </p>
 
-### Setup
+## Setup
 ..................<br/>
 .............<br/>
 
@@ -144,17 +140,37 @@ An Elegant Cross-platform MQTT 5.0 Desktop Client<br/>
 <br/>
 </p>
 
-## Hardware
-..................<br/>
-.............<br/>
+# Hardware
+...............<br/>
+......................<br/>
+
+<p>
+<br/>
+</p>
+
+## Hardware Componenter
+Til dette project bruges der følgene hardware <br/>
+
+* Udviklings board
+    * Atmel Mega 2560
+    * MKR WIFI 1010
+* Sensore
+    * DHT11 (temperatur og luftfugtighed)
+
+<p>
+<br/>
+</p>
+
+## Tilkobling Pinout
+...............<br/>
+......................<br/>
 
 <p>
 <br/><br/>
 </p>
 
-___
 
-## Anerkendelse
+# Anerkendelse
 
 Dette project eksistere grundet disse menesker:
 
