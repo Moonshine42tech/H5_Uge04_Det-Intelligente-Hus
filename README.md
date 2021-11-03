@@ -72,7 +72,7 @@ lav et "proof of concept" der kan demonstrere følgene krav.
         * Temperature og Humidity målinger skal sendes op til 'thingspeak'
 
     * Hoveddøren: <br/>
-    En RFID kort/chip skal fungere som en nøjle til huset. 
+        * En RFID kort/chip skal fungere som en nøjle til huset. 
         * En servo motor skal vise døren der åbner/lukker.
         * Døren skal kunne styres både trådløst (via MQTT) og via RFID kort/chip<br/>
 <br/>
