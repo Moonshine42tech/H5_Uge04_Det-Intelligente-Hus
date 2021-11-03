@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Atmel Studio Solution File, Format Version 11.00
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "Hus", "Hus\BareMinimum\Hus.cppproj", "{DCE6C7E3-EE26-4D79-826B-08594B9AD897}"
+Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "AtmelMega2560", "AtmelMega2560\BareMinimum\AtmelMega2560.cppproj", "{DCE6C7E3-EE26-4D79-826B-08594B9AD897}"
 EndProject
-Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "ArduinoCore", "Hus\ArduinoCore\ArduinoCore.cppproj", "{CAC9648A-7670-47B8-8ABB-0E63DD67486B}"
+Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "ArduinoCore", "AtmelMega2560\ArduinoCore\ArduinoCore.cppproj", "{61B58233-254D-494B-A0E2-E170B956690E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{DCE6C7E3-EE26-4D79-826B-08594B9AD897}.Debug|AVR.Build.0 = Debug|AVR
 		{DCE6C7E3-EE26-4D79-826B-08594B9AD897}.Release|AVR.ActiveCfg = Release|AVR
 		{DCE6C7E3-EE26-4D79-826B-08594B9AD897}.Release|AVR.Build.0 = Release|AVR
-		{CAC9648A-7670-47B8-8ABB-0E63DD67486B}.Debug|AVR.ActiveCfg = Debug|AVR
-		{CAC9648A-7670-47B8-8ABB-0E63DD67486B}.Debug|AVR.Build.0 = Debug|AVR
-		{CAC9648A-7670-47B8-8ABB-0E63DD67486B}.Release|AVR.ActiveCfg = Release|AVR
-		{CAC9648A-7670-47B8-8ABB-0E63DD67486B}.Release|AVR.Build.0 = Release|AVR
+		{61B58233-254D-494B-A0E2-E170B956690E}.Debug|AVR.ActiveCfg = Debug|AVR
+		{61B58233-254D-494B-A0E2-E170B956690E}.Debug|AVR.Build.0 = Debug|AVR
+		{61B58233-254D-494B-A0E2-E170B956690E}.Release|AVR.ActiveCfg = Release|AVR
+		{61B58233-254D-494B-A0E2-E170B956690E}.Release|AVR.Build.0 = Release|AVR
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
