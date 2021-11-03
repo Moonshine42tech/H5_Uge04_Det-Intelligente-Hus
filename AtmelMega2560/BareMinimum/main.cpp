@@ -6,7 +6,7 @@
 #include <Wire.h>
 
 
-
+byte x = 0;
 #pragma region DHT
 
 #define DHTPIN 2			// Digital pin connected to the DHT sensor
@@ -58,7 +58,7 @@ void loop()
 	// set Temperature value
 	if (isnan(event.temperature))
 	{
-		DhtSencorTemp = -1;
+		DhtSencorTemp = 420;
 	}
 	else
 	{
@@ -75,7 +75,7 @@ void loop()
 	// set Humidity value
 	if (isnan(event.relative_humidity))
 	{
-		DhtSencorHum = -1;
+		DhtSencorHum = 360;
 	}
 	else
 	{
@@ -92,28 +92,32 @@ void loop()
 	//// testing DHT11 sensor output in Terminal
 	//Serial.print("Temp: ");
 	//Serial.println(DhtSencorTemp);
-	//
 	//Serial.print("Hum: ");
 	//Serial.println(DhtSencorHum);
-
-  Wire.beginTransmission(1);		// transmit to device #1
   
-  // Send Temp Data
-  Wire.write("Temp: ");        
-  Wire.write(DhtSencorTemp);         
+  Wire.beginTransmission(4);		// transmit to device #4
   
-  // Send Hum data
-  Wire.write("Hum: ");        
-  Wire.write(DhtSencorHum);         
+  Wire.write("Temp: ");				// sends some bytes
+  Wire.write(DhtSencorTemp);		// sends some bytes
   
   Wire.endTransmission();			// stop transmitting
   
+  Wire.beginTransmission(4);		// transmit to device #4
+  
+  Wire.write("Hum: ");			// sends some bytes
+  Wire.write(DhtSencorHum);		    // sends some bytes
+  
+  Wire.endTransmission();			// stop transmitting
+
+
+	
 #pragma endregion Master Writer/Slave Receiver
 
-#pragma region RFID lår (Hoveddør)
+#pragma region RFID lås (Hoveddør)
 
 	//...
 
-#pragma endregion RFID lår (Hoveddør)
+#pragma endregion RFID lås (Hoveddør)
 
+  delay(1000);		// run loop every 1 sec
 }
