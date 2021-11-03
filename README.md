@@ -16,6 +16,7 @@ ___
 
 * [Introduktion](#Introduktion)
     * [Projectets formål](#Projectets-formål)
+    * [Godt at vide](#Godt-at-videl)
 * [Functionelle og non-functionelle krav](#Functionelle-og-non-functionelle-krav)
 * [Brugsvejledning](#Brugsvejledning)
     * [Setup](#Setup)
@@ -32,7 +33,7 @@ ___
 
 ## Introduktion
 
-Det intelligente hus er en simplificeret repræsentation af hvad der er muligt at lave med embeded programmering og IoT. Dette project er en skole opgave, som i teorien godt ville kunne inplementeres i et rigtigt smart home. 
+Det intelligente hus er en simplificeret repræsentation af hvad der er muligt at lave med embeded programmering og IoT. Dette project er en skole opgave, som i teorien godt ville kunne inplementeres i et rigtigt home. 
 
 <p>
 <br/>
@@ -46,27 +47,48 @@ Det intiligente hus er et skoleproject der har til formål at vise underviseren 
 <br/>
 </p>
 
+### Godt at vide
+
+* Der vil ikke blive inplimenteret en fysisk menu function i dette project, da der er sat fokus på at dette intelligente hus, kun skal kunne styres via en app. <br/>(appen kommer på et senere fag).
+
+* Dette project har taget udgangspunkt i at bruge følgene teknologier til komunikation. 
+    * MQTT 
+    * SPI (Serial Peripheral Interface)
+    * I2C (Inter-Integrated Circuit) / TWI (Two Wire Interface)
+    * Seriel datakommunikation 
+    * Wi-Fi
+
+<p>
+<br/>
+</p>
+
 ## Functionelle og non-functionelle krav
 
 lav et "proof of concept" der kan demonstrere følgene krav. 
 
-* Sikkerhed skal være indtænkt overalt.
-
 * Fjernstyring af forskellige funktioner.
 
-    * Lys i de forkællige rum skal kunne styres via en app.
+    * Huset skal have midst en alarm og alle alarmer skal kunne deaktiveres både trådløst over MQTT og ved fysist at trykke på en knap.
 
-    * Alle alarmer skal aktivere en "alarm lyd". men skal kunne deaktiveres både trådløst og ved fysist at trykke på en knap.
+    * Termustat: 
+        * Temperature og Humidity skal sendes fra et 'board' til et andet 'board'. 
+        * Temperature og Humidity målinger skal sendes op til 'thingspeak'
 
     * Hoveddøren: <br/>
     En RFID kort/chip skal fungere som en nøjle til huset. 
-        * Rød led for låst dør .
-        * Grøn led for u-låst dør.
         * En servo motor skal vise døren der åbner/lukker.
-        * Døren skal kunne styres både vi app og via RFID kort/chip
-        <br/>
+        * Døren skal kunne styres både trådløst (via MQTT) og via RFID kort/chip<br/>
+<br/>
 
 * Et 'stort display' der skal vise den sidste ændring det er sket i huset. f.eks "Stue lyd: OFF"
+
+<p>
+<br/>
+</p>
+
+### Fremtidige kvav 
+
+* Lys i de forkællige rum skal kunne styres via en app.
 
 * Opsamlet data skal, i 'App Programmering 3' faget, kunne præseteres i en mobil app.
 
