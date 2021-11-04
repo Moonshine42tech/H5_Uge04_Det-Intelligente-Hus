@@ -144,7 +144,12 @@ void sendDataToThingspeak()
 // this function is registered as an event, see setup()
 void sendDataEvent() 
 {
-  Wire.write("TOGGLE"); // respond with message of 6 bytes
-  // as expected by master
+  // temp code to marster
+  Wire.write("TOGGLE"); // respond with message of 7 bytes
+  
 }
 
+void GetDataFromThingspeakClient() 
+{
+
+}

@@ -183,7 +183,7 @@ void loop()
   
   Wire.beginTransmission(4);		// transmit to device #4
   
-  Wire.write("Hum: ");			// sends some bytes
+  Wire.write("Hum: ");				// sends some bytes
   Wire.write(DhtSencorHum);		    // sends some bytes
   
   Wire.endTransmission();			// stop transmitting
@@ -193,7 +193,7 @@ void loop()
 	// Ask slave (MKR WIFI 110 board) for data
 #pragma region Master Receiver/Slave Writer
 	
-	Wire.requestFrom(4, 6);		// request 6 bytes from slave device #4
+	Wire.requestFrom(4, 7);		// request 6 bytes from slave device #4
 
 	String keyword =  "";
 	// slave may send less than requested
@@ -202,6 +202,9 @@ void loop()
 		char request_c = Wire.read();		// receive a byte as character
 		keyword += request_c;
 	}
+	
+	// Removes the last char in the received string
+	 keyword = keyword.substring(0, keyword.length() - 1);
 	 
 	// Verify incoming data
 	if (keyword == "TOGGLE")
@@ -209,8 +212,6 @@ void loop()
 		// toggle servo position
 		moveServo();
 	}
-	 
-	delay(500);
 
 #pragma endregion Master Receiver/Slave Writer
 
