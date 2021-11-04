@@ -8,20 +8,14 @@
 #include <Servo.h>
 
 
-// TODO 
-// FIX SERVO humming 
-// FIX RFID LEDs not toggling
-
-
 // Define functions
 int RfidValidater(); 
 void moveServo();
 void makeBipSound(int soundMode);
-void SwitchRfidLeds();
-
+void SetRfidLeds(bool status); 
 
 byte x = 0;
-
+int BIP_PIN = 10;	// For ALARM and feed back sound effects
 
 #pragma region DHT
 
@@ -39,19 +33,21 @@ int DhtSencorHum;
 
 #pragma region RFID
 
-//// definitions
-//#define RST_PIN   5     // Configurable, see typical pin layout above
-//#define SS_PIN    53    // Configurable, see typical pin layout above
-//
-//MFRC522 mfrc522(SS_PIN, RST_PIN);   // Create MFRC522 instance
-//
-///* Set your new UID here! */
-//#define NEW_UID {0xDE, 0xAD, 0xBE, 0xEF}
-//
-//MFRC522::MIFARE_Key key;
-//
-//// Normally this would be in a separate .h file.
-//String Valid_RFID_Code = "30 45 66 A7";		// card =  30 45 66 A7 | chip = F7 DD 5A D3
+// definitions
+#define RST_PIN   5							// Configurable, see typical pin layout above
+#define SS_PIN    53						// Configurable, see typical pin layout above
+#define NEW_UID {0xDE, 0xAD, 0xBE, 0xEF}	// Set your new UID here!
+
+int isCardValid = 0;	// set - reset state
+
+MFRC522 mfrc522(SS_PIN, RST_PIN);   // Create MFRC522 instance
+
+
+
+MFRC522::MIFARE_Key key;
+
+// Normally this would be in a separate .h file.
+String Valid_RFID_Code = "30 45 66 A7";		// card =  30 45 66 A7 | chip = F7 DD 5A D3
 
 #pragma endregion RFID
 
@@ -64,8 +60,8 @@ int Servo_pin = 12;		// Servo signal pin
 
 #pragma region LEDs
 
-int RFID_GREEN_LED = 8; // Green led pin
-int RFID_RED_LED = 9;	// Red led pin;
+int RFID_GREEN_LED  = 8;	// Green led pin
+int RFID_RED_LED  = 9;		// Red led pin;
 
 #pragma endregion LEDs
 
@@ -74,18 +70,17 @@ void setup()
 	Serial.begin(9600);
 	Wire.begin(); // join i2c bus (address optional for master)
 	
-	pinMode(10, OUTPUT);	// alarm biber
-	digitalWrite(10, LOW); // silence the alarm biber
+	pinMode(BIP_PIN, OUTPUT);	// alarm biber
+	digitalWrite(BIP_PIN, LOW);  // silence the alarm biber
 	
 #pragma region LEDs
 
-// Front door led status indicator for door lock
-pinMode(RFID_GREEN_LED, OUTPUT);	// Green led
-pinMode(RFID_RED_LED, OUTPUT);		// Red led
+	// Front door led status indicator for door lock
+	pinMode(RFID_GREEN_LED, OUTPUT);	// Green led
+	pinMode(RFID_RED_LED, OUTPUT);		// Red led
 
-// set led state for startup
-digitalWrite(RFID_GREEN_LED, LOW);	// Green led
-digitalWrite(RFID_RED_LED, HIGH);	// Red led
+	// set door led state to closed 
+	SetRfidLeds(true);
 
 #pragma endregion LEDs
 
@@ -127,7 +122,7 @@ void loop()
 {
 	// Delay between measurements.
 	delay(delayMS);
-
+	
 	// Take Measurements
 #pragma region DHT
 
@@ -198,7 +193,7 @@ void loop()
 
 #pragma region RFID lås (Hoveddør)
 
-	int isCardValid = 0;	// set - reset state
+	isCardValid = 0;	   // set - reset state
 
 	// Look for new cards, and select one if present
 	if ( ! mfrc522.PICC_IsNewCardPresent() || ! mfrc522.PICC_ReadCardSerial() )
@@ -209,16 +204,10 @@ void loop()
 	else 
 	{
 		isCardValid = RfidValidater();
-		Serial.print("stade 1: ");
-		Serial.println(isCardValid);
+
 		// if card/chip is valid
 		if (isCardValid == 1)
-		{
-			Serial.print("stade 2: ");
-			Serial.println(isCardValid);
-			// Toggles the Front door status led's
-			SwitchRfidLeds();
-				
+		{			
 			// makes 1 small bib sound
 			makeBipSound(1);
 				
@@ -227,12 +216,7 @@ void loop()
 		}
 		// if card/chip is not valid
 		else if (isCardValid == 2)
-		{
-			Serial.print("stade 3: ");
-			Serial.println(isCardValid);
-			// Toggles the Front door status led's
-			SwitchRfidLeds();
-				
+		{	
 			// makes 3 small bib sounds
 			makeBipSound(2);
 		}
@@ -247,57 +231,60 @@ void loop()
 // This function adds RFID functionality to the program.
 // - It can see if a card is present or not. 
 // - it can return 3 states: 0 = null, 1 = true, -1 = false.
-//int RfidValidater() 
-//{
-//
-//#pragma region reading card and format output
-//
-	//// reading card
-	//String content= "";
-	//byte letter;
-	//for (byte i = 0; i < mfrc522.uid.size; i++)
-	//{
-		//Serial.print(mfrc522.uid.uidByte[i] < 0x10 ? " 0" : " ");
-		//Serial.print(mfrc522.uid.uidByte[i], HEX);
-		//content.concat(String(mfrc522.uid.uidByte[i] < 0x10 ? " 0" : " "));
-		//content.concat(String(mfrc522.uid.uidByte[i], HEX));
-	//}
-	//
-	//// formating output
-	//content.toUpperCase();
-	//
-//#pragma endregion reading card and format output
-	//
-//#pragma region Validate card reading 
-//
-	//// validation
-	////if (content.substring(1) == Valid_RFID_Code) //change here the UID of the card/cards that you want to give access
+int RfidValidater() 
+{
+
+#pragma region reading card and format output
+
+	// reading card
+	String content= "";
+	byte letter;
+	for (byte i = 0; i < mfrc522.uid.size; i++)
+	{
+		Serial.print(mfrc522.uid.uidByte[i] < 0x10 ? " 0" : " ");
+		Serial.print(mfrc522.uid.uidByte[i], HEX);
+		content.concat(String(mfrc522.uid.uidByte[i] < 0x10 ? " 0" : " "));
+		content.concat(String(mfrc522.uid.uidByte[i], HEX));
+	}
+	
+	// formating output
+	content.toUpperCase();
+	
+#pragma endregion reading card and format output
+	
+#pragma region Validate card reading 
+
+	// validation
 	//if (content.substring(1) == Valid_RFID_Code) //change here the UID of the card/cards that you want to give access
-	//{
-		////Serial.println("Authorized access");
-		////Serial.println();
-		//return 1;
-	//}
-	//else
-	//{
-		////Serial.println(" Access denied");
-		//return 2;
-	//}
-	//
-//#pragma endregion Validate card reading 
-//
-//}
+	if (content.substring(1) == Valid_RFID_Code) //change here the UID of the card/cards that you want to give access
+	{
+		Serial.println();
+		Serial.println("Authorized access");
+		Serial.println();
+		return 1;
+	}
+	else
+	{
+		Serial.println();
+		Serial.println(" Access denied");
+		Serial.println();
+		return 2;
+	}
+	
+#pragma endregion Validate card reading 
+
+}
 
 // This function switches between high and low values each time it is called.
-void SwitchRfidLeds() 
+void SetRfidLeds(bool status)
 {
-	// Toggles the Front door status led's
-	if (RFID_GREEN_LED == HIGH)
+	// sets the Front door status led's state
+	if (status == false)
 	{
-		digitalWrite(RFID_GREEN_LED, LOW);	// Light up GREEN LED
-		digitalWrite(RFID_RED_LED, HIGH);	// Turn OFF RED LED
+		digitalWrite(RFID_GREEN_LED, LOW);	// Turn OFF GREEN LED
+		digitalWrite(RFID_RED_LED, HIGH);	// Light up RED LED
 	}
-	if (RFID_RED_LED == HIGH)
+	if (status == true)
 	{
 		digitalWrite(RFID_GREEN_LED, HIGH);	// Light up GREEN LED
 		digitalWrite(RFID_RED_LED, LOW);	// Turn OFF RED LED
@@ -313,12 +300,16 @@ void moveServo()
 	{
 		digitalWrite(Servo_pin, HIGH);
 		servo.write(0);
+		
+		SetRfidLeds(true);		// red light off | green light onn
 	}
 	// Lås døren
 	else if ( servo.read() == 0 )
 	{
 		digitalWrite(Servo_pin, LOW);
 		servo.write(180);
+		
+		SetRfidLeds(false);		// red light on | green light off
 	}
 	// Correct servo error. (Set state to closed)
 	else 
@@ -337,9 +328,9 @@ void makeBipSound(int soundMode)
 	// 1 Short bib sound
 	if (soundMode == 1)
 	{
-		digitalWrite(10, HIGH); // start alarm
+		digitalWrite(BIP_PIN, HIGH); // start alarm
 		delay(100);
-		digitalWrite(10, LOW); // silence the alarm 
+		digitalWrite(BIP_PIN, LOW); // silence the alarm 
 	}
 	// 3 short bib sound 
 	else if (soundMode == 2)
@@ -347,15 +338,15 @@ void makeBipSound(int soundMode)
 		// bibs 3 times
 		for (int i = 0; i < 2;  i++)
 		{
-			digitalWrite(10, HIGH); // start alarm
+			digitalWrite(BIP_PIN, HIGH); // start alarm
 			delay(50);
-			digitalWrite(10, LOW); // silence the alarm
+			digitalWrite(BIP_PIN, LOW); // silence the alarm
 		}
 	}
 	// No stop bib sound (ALARM mode)
 	else if (soundMode == 3)
 	{
-		digitalWrite(10, HIGH); // start alarm
+		digitalWrite(BIP_PIN, HIGH); // start alarm
 	}
 	delay(100);
 }

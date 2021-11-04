@@ -89,8 +89,7 @@ C_SRCS +=  \
 ../src/libraries/Servo/src/stm32f4/Servo.cpp \
 ../src/libraries/SPI/src/SPI.cpp \
 ../src/libraries/Wire/src/utility/twi.c \
-../src/libraries/Wire/src/Wire.cpp \
-../src/RFID_Functions.cpp
+../src/libraries/Wire/src/Wire.cpp
 
 
 PREPROCESSING_SRCS += 
@@ -114,8 +113,7 @@ src/libraries/Servo/src/sam/Servo.o \
 src/libraries/Servo/src/stm32f4/Servo.o \
 src/libraries/SPI/src/SPI.o \
 src/libraries/Wire/src/utility/twi.o \
-src/libraries/Wire/src/Wire.o \
-src/RFID_Functions.o
+src/libraries/Wire/src/Wire.o
 
 OBJS_AS_ARGS +=  \
 main.o \
@@ -132,8 +130,7 @@ src/libraries/Servo/src/sam/Servo.o \
 src/libraries/Servo/src/stm32f4/Servo.o \
 src/libraries/SPI/src/SPI.o \
 src/libraries/Wire/src/utility/twi.o \
-src/libraries/Wire/src/Wire.o \
-src/RFID_Functions.o
+src/libraries/Wire/src/Wire.o
 
 C_DEPS +=  \
 main.d \
@@ -150,8 +147,7 @@ src/libraries/Servo/src/sam/Servo.d \
 src/libraries/Servo/src/stm32f4/Servo.d \
 src/libraries/SPI/src/SPI.d \
 src/libraries/Wire/src/utility/twi.d \
-src/libraries/Wire/src/Wire.d \
-src/RFID_Functions.d
+src/libraries/Wire/src/Wire.d
 
 C_DEPS_AS_ARGS +=  \
 main.d \
@@ -168,8 +164,7 @@ src/libraries/Servo/src/sam/Servo.d \
 src/libraries/Servo/src/stm32f4/Servo.d \
 src/libraries/SPI/src/SPI.d \
 src/libraries/Wire/src/utility/twi.d \
-src/libraries/Wire/src/Wire.d \
-src/RFID_Functions.d
+src/libraries/Wire/src/Wire.d
 
 OUTPUT_FILE_PATH +=AtmelMega2560.elf
 
@@ -285,13 +280,6 @@ src/libraries/Wire/src/utility/twi.o: ../src/libraries/Wire/src/utility/twi.c
 	
 
 src/libraries/Wire/src/Wire.o: ../src/libraries/Wire/src/Wire.cpp
-	@echo Building file: $<
-	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108016 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\DHT-sensor-library" -I"..\include\libraries\Adafruit_Unified_Sensor" -I"..\include\libraries\SPI\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility" -I"..\include\libraries\rfid" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
-	@echo Finished building: $<
-	
-
-src/RFID_Functions.o: ../src/RFID_Functions.cpp
 	@echo Building file: $<
 	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
 	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108016 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\DHT-sensor-library" -I"..\include\libraries\Adafruit_Unified_Sensor" -I"..\include\libraries\SPI\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility" -I"..\include\libraries\rfid" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 

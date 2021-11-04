@@ -322,9 +322,6 @@
     <Compile Include="include\libraries\Wire\src\Wire.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="include\RfidKeys.h">
-      <SubType>compile</SubType>
-    </Compile>
     <Compile Include="main.cpp">
       <SubType>compile</SubType>
     </Compile>
@@ -368,9 +365,6 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\libraries\Wire\src\Wire.cpp">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="src\RFID_Functions.cpp">
       <SubType>compile</SubType>
     </Compile>
     <Content Include="readme.html">
