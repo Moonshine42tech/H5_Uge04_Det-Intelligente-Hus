@@ -5,6 +5,10 @@
 #include <thingspeak._secrets.h>    // thingspeak API and MQTT credentials
 #include "ThingSpeak.h" 
 
+// test
+// #include <LiquidCrystal.h>
+
+// LiquidCrystal_I2C lcd(0x27,20,4);
 
 // function declarations
 void receiveDataEvent(int howMany);
@@ -51,10 +55,28 @@ void setup()
 #pragma endregion Wi-Fi
 
   ThingSpeak.begin(client);  //Initialize ThingSpeak
+
+
+  // test
+  // lcd.init();                      // initialize the lcd 
+  // lcd.init();
+  // // Print a message to the LCD.
+  // lcd.backlight();
+  // lcd.setCursor(1,0);
+  // lcd.print("hello everyone");
+  // lcd.setCursor(1,1);
+  // lcd.print("konichiwaa");
 }
 
 void loop() 
 {
+  // test
+  // // set the cursor to column 0, line 1
+  // // (note: line 1 is the second row, since counting begins with 0):
+  // lcd.setCursor(0, 1);
+  // // print the number of seconds since reset:
+  // lcd.print(millis() / 1000);
+  
 
 #pragma region Connect/reconnect to Wi-Fi
 
@@ -129,6 +151,7 @@ void receiveDataEvent(int howMany)
 // A function that writes to filds in a ThingSpeak channel
 void sendDataToThingspeak() 
 {
+  delay(100);
   // write to the ThingSpeak channel
   int x = ThingSpeak.writeFields(myChannelNumber, myWriteAPIKey);
   if(x == 200){
@@ -145,11 +168,8 @@ void sendDataToThingspeak()
 void sendDataEvent() 
 {
   // temp code to marster
-  Wire.write("TOGGLE"); // respond with message of 7 bytes
-  
-}
+  //Wire.write("TOGGLE"); // respond with message of 7 bytes
 
-void GetDataFromThingspeakClient() 
-{
-
+  // // get data from a Thingspeak field
+  // ThingSpeak.readStringField(Channel_ID, 3, myReadAPIKey);
 }

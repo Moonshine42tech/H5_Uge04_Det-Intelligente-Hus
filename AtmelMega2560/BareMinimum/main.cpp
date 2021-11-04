@@ -137,7 +137,7 @@ void loop()
 	// set Temperature value
 	if (isnan(event.temperature))
 	{
-		DhtSencorTemp = 420;
+		DhtSencorTemp = 0;
 	}
 	else
 	{
@@ -154,7 +154,7 @@ void loop()
 	// set Humidity value
 	if (isnan(event.relative_humidity))
 	{
-		DhtSencorHum = 360;
+		DhtSencorHum = 0;
 	}
 	else
 	{
@@ -163,16 +163,24 @@ void loop()
 	
 #pragma endregion DHT Humidity
 
+	// Alarm the user if conditions are critical
+	if (DhtSencorTemp > 27 || DhtSencorHum > 70)
+	{
+		if (DhtSencorTemp > 27)
+		{
+			Serial.println("ALARM: The temperature is to high");
+		}
+		if (DhtSencorHum > 70)
+		{
+			Serial.println("ALARM: Humidity levels is to high");
+		}
+		makeBipSound(3); // ALARM sound
+	}
+
 #pragma endregion DHT
 
 	// Send values to MKR WIFI 110 board
 #pragma region Master Writer/Slave Receiver
-
-	//// testing DHT11 sensor output in Terminal
-	//Serial.print("Temp: ");
-	//Serial.println(DhtSencorTemp);
-	//Serial.print("Hum: ");
-	//Serial.println(DhtSencorHum);
   
   Wire.beginTransmission(4);		// transmit to device #4
   
@@ -202,12 +210,25 @@ void loop()
 		char request_c = Wire.read();		// receive a byte as character
 		keyword += request_c;
 	}
+	keyword += Wire.read();        // receive byte as an integer
 	
 	// Removes the last char in the received string
 	 keyword = keyword.substring(0, keyword.length() - 1);
 	 
+	 Serial.println(keyword);
+	 
 	// Verify incoming data
 	if (keyword == "TOGGLE")
+	{
+		// toggle servo position
+		moveServo();
+	}
+	if (keyword == "42")
+	{
+		// toggle servo position
+		moveServo();
+	}
+	if (keyword == "69")
 	{
 		// toggle servo position
 		moveServo();
