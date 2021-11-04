@@ -6,7 +6,7 @@
 #include <Wire.h>
 #include <MFRC522.h>
 #include <Servo.h>
-//#include <RfidKeys.h>
+
 
 // TODO 
 // FIX SERVO humming 
@@ -39,16 +39,19 @@ int DhtSencorHum;
 
 #pragma region RFID
 
-// definitions
-#define RST_PIN   5     // Configurable, see typical pin layout above
-#define SS_PIN    53    // Configurable, see typical pin layout above
-
-MFRC522 mfrc522(SS_PIN, RST_PIN);   // Create MFRC522 instance
-
-/* Set your new UID here! */
-#define NEW_UID {0xDE, 0xAD, 0xBE, 0xEF}
-
-MFRC522::MIFARE_Key key;
+//// definitions
+//#define RST_PIN   5     // Configurable, see typical pin layout above
+//#define SS_PIN    53    // Configurable, see typical pin layout above
+//
+//MFRC522 mfrc522(SS_PIN, RST_PIN);   // Create MFRC522 instance
+//
+///* Set your new UID here! */
+//#define NEW_UID {0xDE, 0xAD, 0xBE, 0xEF}
+//
+//MFRC522::MIFARE_Key key;
+//
+//// Normally this would be in a separate .h file.
+//String Valid_RFID_Code = "30 45 66 A7";		// card =  30 45 66 A7 | chip = F7 DD 5A D3
 
 #pragma endregion RFID
 
@@ -192,31 +195,47 @@ void loop()
 	
 #pragma endregion Master Writer/Slave Receiver
 
+
 #pragma region RFID lås (Hoveddør)
 
-	int isCardValid = 0;
-	isCardValid = RfidValidater();
-	
-	// if card/chip is valid
-	if (isCardValid == 1)
+	int isCardValid = 0;	// set - reset state
+
+	// Look for new cards, and select one if present
+	if ( ! mfrc522.PICC_IsNewCardPresent() || ! mfrc522.PICC_ReadCardSerial() )
 	{
-		// Toggles the Front door status led's
-		SwitchRfidLeds();
-				
-		// makes 1 small bib sound
-		makeBipSound(1);
-		
-		// Move servo
-		moveServo();
+		delay(50);
+		isCardValid = 0;
 	}
-	// if card/chip is not valid
-	else if (isCardValid == -1)
+	else 
 	{
-		// Toggles the Front door status led's
-		SwitchRfidLeds();
+		isCardValid = RfidValidater();
+		Serial.print("stade 1: ");
+		Serial.println(isCardValid);
+		// if card/chip is valid
+		if (isCardValid == 1)
+		{
+			Serial.print("stade 2: ");
+			Serial.println(isCardValid);
+			// Toggles the Front door status led's
+			SwitchRfidLeds();
 				
-		// makes 3 small bib sounds
-		makeBipSound(2);
+			// makes 1 small bib sound
+			makeBipSound(1);
+				
+			// Move servo
+			moveServo();
+		}
+		// if card/chip is not valid
+		else if (isCardValid == 2)
+		{
+			Serial.print("stade 3: ");
+			Serial.println(isCardValid);
+			// Toggles the Front door status led's
+			SwitchRfidLeds();
+				
+			// makes 3 small bib sounds
+			makeBipSound(2);
+		}
 	}
 	
 #pragma endregion RFID lås (Hoveddør)
@@ -228,52 +247,46 @@ void loop()
 // This function adds RFID functionality to the program.
 // - It can see if a card is present or not. 
 // - it can return 3 states: 0 = null, 1 = true, -1 = false.
-int RfidValidater() 
-{
-	// Look for new cards, and select one if present
-	if ( ! mfrc522.PICC_IsNewCardPresent() || ! mfrc522.PICC_ReadCardSerial() )
-	{
-		delay(50);
-		return 0;
-	}
-	
-#pragma region reading card and format output
-
-	// reading card
-	String content= "";
-	byte letter;
-	for (byte i = 0; i < mfrc522.uid.size; i++)
-	{
-		Serial.print(mfrc522.uid.uidByte[i] < 0x10 ? " 0" : " ");
-		Serial.print(mfrc522.uid.uidByte[i], HEX);
-		content.concat(String(mfrc522.uid.uidByte[i] < 0x10 ? " 0" : " "));
-		content.concat(String(mfrc522.uid.uidByte[i], HEX));
-	}
-	
-	// formating output
-	content.toUpperCase();
-	
-#pragma endregion reading card and format output
-	
-#pragma region Validate card reading 
-
-	// validation
+//int RfidValidater() 
+//{
+//
+//#pragma region reading card and format output
+//
+	//// reading card
+	//String content= "";
+	//byte letter;
+	//for (byte i = 0; i < mfrc522.uid.size; i++)
+	//{
+		//Serial.print(mfrc522.uid.uidByte[i] < 0x10 ? " 0" : " ");
+		//Serial.print(mfrc522.uid.uidByte[i], HEX);
+		//content.concat(String(mfrc522.uid.uidByte[i] < 0x10 ? " 0" : " "));
+		//content.concat(String(mfrc522.uid.uidByte[i], HEX));
+	//}
+	//
+	//// formating output
+	//content.toUpperCase();
+	//
+//#pragma endregion reading card and format output
+	//
+//#pragma region Validate card reading 
+//
+	//// validation
+	////if (content.substring(1) == Valid_RFID_Code) //change here the UID of the card/cards that you want to give access
 	//if (content.substring(1) == Valid_RFID_Code) //change here the UID of the card/cards that you want to give access
-	if (content.substring(1) == "30 45 66 A7") //change here the UID of the card/cards that you want to give access
-	{
-		Serial.println("Authorized access");
-		Serial.println();
-		return 1;
-	}
-	else
-	{
-		Serial.println(" Access denied");
-		return -1;
-	}
-	
-#pragma endregion Validate card reading 
-
-}
+	//{
+		////Serial.println("Authorized access");
+		////Serial.println();
+		//return 1;
+	//}
+	//else
+	//{
+		////Serial.println(" Access denied");
+		//return 2;
+	//}
+	//
+//#pragma endregion Validate card reading 
+//
+//}
 
 // This function switches between high and low values each time it is called.
 void SwitchRfidLeds() 
