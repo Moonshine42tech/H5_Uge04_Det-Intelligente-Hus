@@ -8,6 +8,7 @@
 
 // function declarations
 void receiveDataEvent(int howMany);
+void sendDataEvent();
 void sendDataToThingspeak();
 
 
@@ -33,7 +34,8 @@ int DHT11_Humidity;
 void setup() 
 {
   Wire.begin(4);                      // join I2C bus with address #4
-  Wire.onReceive(receiveDataEvent);   // register event
+  Wire.onReceive(receiveDataEvent);   // register Receive from marster event
+  Wire.onRequest(sendDataEvent);      // register Send to marster event
 
   Serial.begin(9600);                 // start serial for output (matching the speed of the slowest module ine the house)
 
@@ -101,7 +103,7 @@ void receiveDataEvent(int howMany)
   int x = Wire.read();        // receive byte as an integer
 
 
-  // Verify incomming data
+  // Verify incoming data
   if (keyword == "Temp: ") 
   {
     // Checking the values that got through
@@ -136,3 +138,13 @@ void sendDataToThingspeak()
     Serial.println("Problem updating channel. HTTP error code " + String(x));
   }
 }
+
+
+// function that executes whenever data is requested by master
+// this function is registered as an event, see setup()
+void sendDataEvent() 
+{
+  Wire.write("TOGGLE"); // respond with message of 6 bytes
+  // as expected by master
+}
+

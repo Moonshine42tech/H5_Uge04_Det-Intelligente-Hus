@@ -190,6 +190,30 @@ void loop()
 	
 #pragma endregion Master Writer/Slave Receiver
 
+	// Ask slave (MKR WIFI 110 board) for data
+#pragma region Master Receiver/Slave Writer
+	
+	Wire.requestFrom(4, 6);		// request 6 bytes from slave device #4
+
+	String keyword =  "";
+	// slave may send less than requested
+	while (Wire.available()) 
+	{ 
+		char request_c = Wire.read();		// receive a byte as character
+		keyword += request_c;
+	}
+	 
+	// Verify incoming data
+	if (keyword == "TOGGLE")
+	{
+		// toggle servo position
+		moveServo();
+	}
+	 
+	delay(500);
+
+#pragma endregion Master Receiver/Slave Writer
+
 
 #pragma region RFID lås (Hoveddør)
 
@@ -336,11 +360,12 @@ void makeBipSound(int soundMode)
 	else if (soundMode == 2)
 	{
 		// bibs 3 times
-		for (int i = 0; i < 2;  i++)
+		for (int i = 0; i < 3;  i++)
 		{
-			digitalWrite(BIP_PIN, HIGH); // start alarm
-			delay(50);
-			digitalWrite(BIP_PIN, LOW); // silence the alarm
+			digitalWrite(BIP_PIN, HIGH);	// start alarm
+			delay(100);						// tone length
+			digitalWrite(BIP_PIN, LOW);		// silence the alarm
+			delay(50);						// Interval between tones
 		}
 	}
 	// No stop bib sound (ALARM mode)
