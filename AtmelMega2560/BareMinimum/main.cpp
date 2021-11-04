@@ -6,7 +6,7 @@
 #include <Wire.h>
 #include <MFRC522.h>
 #include <Servo.h>
-
+#include <LiquidCrystal_I2C.h>	// LCD Display
 
 // Define functions
 int RfidValidater(); 
@@ -15,7 +15,13 @@ void makeBipSound(int soundMode);
 void SetRfidLeds(bool status); 
 
 byte x = 0;
-int BIP_PIN = 10;	// For ALARM and feed back sound effects
+int BIP_PIN = 10;					// For ALARM and feed back sound effects
+
+#pragma region LCD Display
+
+LiquidCrystal_I2C lcd(0x27,20,4);  // set the LCD address to 0x27 for a 16 chars and 2 line display
+
+#pragma endregion LCD Display
 
 #pragma region DHT
 
@@ -116,6 +122,15 @@ void setup()
 
 #pragma endregion Servo Motor
  
+ 
+#pragma region LCD Display
+
+  lcd.init();                      // initialize the lcd
+  lcd.init();
+  // Print a message to the LCD.
+  lcd.backlight();
+
+#pragma endregion LCD Display
 }
 
 void loop()
@@ -178,6 +193,17 @@ void loop()
 	}
 
 #pragma endregion DHT
+
+#pragma region LCD Display
+
+	// Print a message to the LCD.
+
+	lcd.setCursor(3,0);
+	lcd.print(DhtSencorTemp);
+	//lcd.setCursor(2,0);
+	//lcd.print(DhtSencorHum);
+
+#pragma endregion LCD Display
 
 	// Send values to MKR WIFI 110 board
 #pragma region Master Writer/Slave Receiver

@@ -10,6 +10,8 @@ src\libraries\DHT-sensor-library\DHT.cpp
 
 src\libraries\DHT-sensor-library\DHT_U.cpp
 
+src\libraries\LiquidCrystal_I2C-1.1\LiquidCrystal_I2C.cpp
+
 src\libraries\rfid\MFRC522.cpp
 
 src\libraries\Servo\src\avr\Servo.cpp

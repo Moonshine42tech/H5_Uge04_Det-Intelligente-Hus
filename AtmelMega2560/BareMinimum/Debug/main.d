@@ -41,7 +41,8 @@ main.d main.o: .././main.cpp ..\\..\ArduinoCore\include\core/Arduino.h \
  ..\\..\ArduinoCore\include\core/Stream.h \
  ..\include\libraries\rfid/MFRC522.h \
  ..\include\libraries\Servo\src/Servo.h \
- ..\include\libraries\Servo\src/avr/ServoTimers.h
+ ..\include\libraries\Servo\src/avr/ServoTimers.h \
+ ..\include\libraries\LiquidCrystal_I2C-1.1/LiquidCrystal_I2C.h
 
 ..\\..\ArduinoCore\include\core/Arduino.h:
 
@@ -132,3 +133,5 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 ..\include\libraries\Servo\src/Servo.h:
 
 ..\include\libraries\Servo\src/avr/ServoTimers.h:
+
+..\include\libraries\LiquidCrystal_I2C-1.1/LiquidCrystal_I2C.h:
