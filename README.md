@@ -84,9 +84,8 @@ lav et "proof of concept" der kan demonstrere følgene krav.
 
 ## Fremtidige kvav 
 
-* Lys i de forkællige rum skal kunne styres via en app.
-
 * Opsamlet data skal, i 'App Programmering 3' faget, kunne præseteres i en mobil app.
+* Der skal laves en menu i 'App Programmering 3' faget, så projectet kan styres via en mobil app.
 
 <p>
 <br/>
