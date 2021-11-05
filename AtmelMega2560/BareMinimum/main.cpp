@@ -198,10 +198,13 @@ void loop()
 
 	// Print a message to the LCD.
 
-	lcd.setCursor(3,0);
+	lcd.setCursor(1,0);
+	lcd.print("Temp: ");
 	lcd.print(DhtSencorTemp);
-	//lcd.setCursor(2,0);
-	//lcd.print(DhtSencorHum);
+
+	lcd.setCursor(1,1);
+	lcd.print("Hum: ");
+	lcd.print(DhtSencorHum);
 
 #pragma endregion LCD Display
 

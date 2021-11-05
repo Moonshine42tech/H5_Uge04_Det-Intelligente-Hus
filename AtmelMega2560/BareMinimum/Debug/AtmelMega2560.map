@@ -1325,8 +1325,6 @@ Discarded input sections
                 0x00000000       0x2a C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
  .text._ZN5Print5printEPK19__FlashStringHelper
                 0x00000000       0x48 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
- .text._ZN5Print5printEPKc
-                0x00000000        0x4 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
  .text._ZN5Print5printERK9Printable
                 0x00000000       0x14 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
  .text._ZN5Print7printlnEPK19__FlashStringHelper
@@ -2057,7 +2055,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x6e66
+.text           0x00000000     0x6ea4
  *(.vectors)
  .vectors       0x00000000       0xe4 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega2560/avr6/crtatmega2560.o
                 0x00000000                __vector_default
@@ -2253,676 +2251,679 @@ END GROUP
                 0x0000068c                _ZN7TwoWire5writeEi
  .text.setup    0x000006ca      0x162 main.o
                 0x000006ca                setup
- .text.loop     0x0000082c      0x35e main.o
+ .text.loop     0x0000082c      0x398 main.o
                 0x0000082c                loop
  .text._Z13RfidValidaterv
-                0x00000b8a      0x148 main.o
-                0x00000b8a                _Z13RfidValidaterv
+                0x00000bc4      0x148 main.o
+                0x00000bc4                _Z13RfidValidaterv
  .text._Z11SetRfidLedsb
-                0x00000cd2       0x6a main.o
-                0x00000cd2                _Z11SetRfidLedsb
+                0x00000d0c       0x6a main.o
+                0x00000d0c                _Z11SetRfidLedsb
  .text._Z9moveServov
-                0x00000d3c       0xa0 main.o
-                0x00000d3c                _Z9moveServov
+                0x00000d76       0xa0 main.o
+                0x00000d76                _Z9moveServov
  .text._Z12makeBipSoundi
-                0x00000ddc       0xc8 main.o
-                0x00000ddc                _Z12makeBipSoundi
+                0x00000e16       0xc8 main.o
+                0x00000e16                _Z12makeBipSoundi
  .text._ZN11DHT_UnifiedD2Ev
-                0x00000ea4       0x2c main.o
-                0x00000ea4                _ZN11DHT_UnifiedD2Ev
-                0x00000ea4                _ZN11DHT_UnifiedD1Ev
+                0x00000ede       0x2c main.o
+                0x00000ede                _ZN11DHT_UnifiedD2Ev
+                0x00000ede                _ZN11DHT_UnifiedD1Ev
  .text._Z41__static_initialization_and_destruction_0ii
-                0x00000ed0       0xbc main.o
+                0x00000f0a       0xbc main.o
  .text._ZN11DHT_Unified11TemperatureD2Ev
-                0x00000f8c       0x3e main.o
-                0x00000f8c                _ZN11DHT_Unified11TemperatureD2Ev
-                0x00000f8c                _ZN11DHT_Unified11TemperatureD1Ev
+                0x00000fc6       0x3e main.o
+                0x00000fc6                _ZN11DHT_Unified11TemperatureD2Ev
+                0x00000fc6                _ZN11DHT_Unified11TemperatureD1Ev
  .text._ZN11DHT_Unified11TemperatureD0Ev
-                0x00000fca       0x28 main.o
-                0x00000fca                _ZN11DHT_Unified11TemperatureD0Ev
+                0x00001004       0x28 main.o
+                0x00001004                _ZN11DHT_Unified11TemperatureD0Ev
  .text._ZN11DHT_Unified8HumidityD2Ev
-                0x00000ff2       0x3e main.o
-                0x00000ff2                _ZN11DHT_Unified8HumidityD1Ev
-                0x00000ff2                _ZN11DHT_Unified8HumidityD2Ev
+                0x0000102c       0x3e main.o
+                0x0000102c                _ZN11DHT_Unified8HumidityD1Ev
+                0x0000102c                _ZN11DHT_Unified8HumidityD2Ev
  .text._ZN11DHT_Unified8HumidityD0Ev
-                0x00001030       0x28 main.o
-                0x00001030                _ZN11DHT_Unified8HumidityD0Ev
+                0x0000106a       0x28 main.o
+                0x0000106a                _ZN11DHT_Unified8HumidityD0Ev
  .text._GLOBAL__sub_I_x
-                0x00001058       0x18 main.o
+                0x00001092       0x18 main.o
  .text._GLOBAL__sub_D_x
-                0x00001070       0x18 main.o
+                0x000010aa       0x18 main.o
  .text._ZN13InterruptLockC2Ev
-                0x00001088       0x1e src/libraries/DHT-sensor-library/DHT.o
-                0x00001088                _ZN13InterruptLockC1Ev
-                0x00001088                _ZN13InterruptLockC2Ev
+                0x000010c2       0x1e src/libraries/DHT-sensor-library/DHT.o
+                0x000010c2                _ZN13InterruptLockC1Ev
+                0x000010c2                _ZN13InterruptLockC2Ev
  .text._ZN13InterruptLockD2Ev
-                0x000010a6       0x1e src/libraries/DHT-sensor-library/DHT.o
-                0x000010a6                _ZN13InterruptLockD2Ev
-                0x000010a6                _ZN13InterruptLockD1Ev
+                0x000010e0       0x1e src/libraries/DHT-sensor-library/DHT.o
+                0x000010e0                _ZN13InterruptLockD2Ev
+                0x000010e0                _ZN13InterruptLockD1Ev
  .text._ZN3DHTC2Ehhh
-                0x000010c4       0xa0 src/libraries/DHT-sensor-library/DHT.o
-                0x000010c4                _ZN3DHTC1Ehhh
-                0x000010c4                _ZN3DHTC2Ehhh
+                0x000010fe       0xa0 src/libraries/DHT-sensor-library/DHT.o
+                0x000010fe                _ZN3DHTC1Ehhh
+                0x000010fe                _ZN3DHTC2Ehhh
  .text._ZN3DHT5beginEh
-                0x00001164       0x54 src/libraries/DHT-sensor-library/DHT.o
-                0x00001164                _ZN3DHT5beginEh
+                0x0000119e       0x54 src/libraries/DHT-sensor-library/DHT.o
+                0x0000119e                _ZN3DHT5beginEh
  .text._ZN3DHT15readTemperatureEbb
-                0x000011b8      0x2c0 src/libraries/DHT-sensor-library/DHT.o
-                0x000011b8                _ZN3DHT15readTemperatureEbb
+                0x000011f2      0x2c0 src/libraries/DHT-sensor-library/DHT.o
+                0x000011f2                _ZN3DHT15readTemperatureEbb
  .text._ZN3DHT11convertCtoFEf
-                0x00001478       0x5a src/libraries/DHT-sensor-library/DHT.o
-                0x00001478                _ZN3DHT11convertCtoFEf
+                0x000014b2       0x5a src/libraries/DHT-sensor-library/DHT.o
+                0x000014b2                _ZN3DHT11convertCtoFEf
  .text._ZN3DHT12readHumidityEb
-                0x000014d2      0x154 src/libraries/DHT-sensor-library/DHT.o
-                0x000014d2                _ZN3DHT12readHumidityEb
+                0x0000150c      0x154 src/libraries/DHT-sensor-library/DHT.o
+                0x0000150c                _ZN3DHT12readHumidityEb
  .text._ZN3DHT4readEb
-                0x00001626      0x588 src/libraries/DHT-sensor-library/DHT.o
-                0x00001626                _ZN3DHT4readEb
+                0x00001660      0x588 src/libraries/DHT-sensor-library/DHT.o
+                0x00001660                _ZN3DHT4readEb
  .text._ZN3DHT11expectPulseEb
-                0x00001bae       0xdc src/libraries/DHT-sensor-library/DHT.o
-                0x00001bae                _ZN3DHT11expectPulseEb
+                0x00001be8       0xdc src/libraries/DHT-sensor-library/DHT.o
+                0x00001be8                _ZN3DHT11expectPulseEb
  .text._ZN15Adafruit_SensorC2Ev
-                0x00001c8a       0x2a src/libraries/DHT-sensor-library/DHT_U.o
-                0x00001c8a                _ZN15Adafruit_SensorC2Ev
-                0x00001c8a                _ZN15Adafruit_SensorC1Ev
+                0x00001cc4       0x2a src/libraries/DHT-sensor-library/DHT_U.o
+                0x00001cc4                _ZN15Adafruit_SensorC2Ev
+                0x00001cc4                _ZN15Adafruit_SensorC1Ev
  .text._ZN11DHT_UnifiedC2Ehhhll
-                0x00001cb4       0xb0 src/libraries/DHT-sensor-library/DHT_U.o
-                0x00001cb4                _ZN11DHT_UnifiedC2Ehhhll
-                0x00001cb4                _ZN11DHT_UnifiedC1Ehhhll
+                0x00001cee       0xb0 src/libraries/DHT-sensor-library/DHT_U.o
+                0x00001cee                _ZN11DHT_UnifiedC2Ehhhll
+                0x00001cee                _ZN11DHT_UnifiedC1Ehhhll
  .text._ZN11DHT_Unified5beginEv
-                0x00001d64       0x24 src/libraries/DHT-sensor-library/DHT_U.o
-                0x00001d64                _ZN11DHT_Unified5beginEv
+                0x00001d9e       0x24 src/libraries/DHT-sensor-library/DHT_U.o
+                0x00001d9e                _ZN11DHT_Unified5beginEv
  .text._ZN11DHT_Unified7setNameEP8sensor_t
-                0x00001d88       0xc2 src/libraries/DHT-sensor-library/DHT_U.o
-                0x00001d88                _ZN11DHT_Unified7setNameEP8sensor_t
+                0x00001dc2       0xc2 src/libraries/DHT-sensor-library/DHT_U.o
+                0x00001dc2                _ZN11DHT_Unified7setNameEP8sensor_t
  .text._ZN11DHT_Unified11setMinDelayEP8sensor_t
-                0x00001e4a       0xc6 src/libraries/DHT-sensor-library/DHT_U.o
-                0x00001e4a                _ZN11DHT_Unified11setMinDelayEP8sensor_t
+                0x00001e84       0xc6 src/libraries/DHT-sensor-library/DHT_U.o
+                0x00001e84                _ZN11DHT_Unified11setMinDelayEP8sensor_t
  .text._ZN11DHT_Unified11TemperatureC2EPS_l
-                0x00001f10       0x70 src/libraries/DHT-sensor-library/DHT_U.o
-                0x00001f10                _ZN11DHT_Unified11TemperatureC2EPS_l
-                0x00001f10                _ZN11DHT_Unified11TemperatureC1EPS_l
+                0x00001f4a       0x70 src/libraries/DHT-sensor-library/DHT_U.o
+                0x00001f4a                _ZN11DHT_Unified11TemperatureC2EPS_l
+                0x00001f4a                _ZN11DHT_Unified11TemperatureC1EPS_l
  .text._ZN11DHT_Unified11Temperature8getEventEP15sensors_event_t
-                0x00001f80       0xb4 src/libraries/DHT-sensor-library/DHT_U.o
-                0x00001f80                _ZN11DHT_Unified11Temperature8getEventEP15sensors_event_t
+                0x00001fba       0xb4 src/libraries/DHT-sensor-library/DHT_U.o
+                0x00001fba                _ZN11DHT_Unified11Temperature8getEventEP15sensors_event_t
  .text._ZN11DHT_Unified11Temperature9getSensorEP8sensor_t
-                0x00002034      0x208 src/libraries/DHT-sensor-library/DHT_U.o
-                0x00002034                _ZN11DHT_Unified11Temperature9getSensorEP8sensor_t
+                0x0000206e      0x208 src/libraries/DHT-sensor-library/DHT_U.o
+                0x0000206e                _ZN11DHT_Unified11Temperature9getSensorEP8sensor_t
  .text._ZN11DHT_Unified8HumidityC2EPS_l
-                0x0000223c       0x70 src/libraries/DHT-sensor-library/DHT_U.o
-                0x0000223c                _ZN11DHT_Unified8HumidityC1EPS_l
-                0x0000223c                _ZN11DHT_Unified8HumidityC2EPS_l
+                0x00002276       0x70 src/libraries/DHT-sensor-library/DHT_U.o
+                0x00002276                _ZN11DHT_Unified8HumidityC1EPS_l
+                0x00002276                _ZN11DHT_Unified8HumidityC2EPS_l
  .text._ZN11DHT_Unified8Humidity8getEventEP15sensors_event_t
-                0x000022ac       0xb2 src/libraries/DHT-sensor-library/DHT_U.o
-                0x000022ac                _ZN11DHT_Unified8Humidity8getEventEP15sensors_event_t
+                0x000022e6       0xb2 src/libraries/DHT-sensor-library/DHT_U.o
+                0x000022e6                _ZN11DHT_Unified8Humidity8getEventEP15sensors_event_t
  .text._ZN11DHT_Unified8Humidity9getSensorEP8sensor_t
-                0x0000235e      0x200 src/libraries/DHT-sensor-library/DHT_U.o
-                0x0000235e                _ZN11DHT_Unified8Humidity9getSensorEP8sensor_t
+                0x00002398      0x200 src/libraries/DHT-sensor-library/DHT_U.o
+                0x00002398                _ZN11DHT_Unified8Humidity9getSensorEP8sensor_t
  .text._ZN5PrintC2Ev
-                0x0000255e       0x34 src/libraries/LiquidCrystal_I2C-1.1/LiquidCrystal_I2C.o
-                0x0000255e                _ZN5PrintC2Ev
-                0x0000255e                _ZN5PrintC1Ev
+                0x00002598       0x34 src/libraries/LiquidCrystal_I2C-1.1/LiquidCrystal_I2C.o
+                0x00002598                _ZN5PrintC2Ev
+                0x00002598                _ZN5PrintC1Ev
  .text._ZN5Print17availableForWriteEv
-                0x00002592       0x1e src/libraries/LiquidCrystal_I2C-1.1/LiquidCrystal_I2C.o
-                0x00002592                _ZN5Print17availableForWriteEv
+                0x000025cc       0x1e src/libraries/LiquidCrystal_I2C-1.1/LiquidCrystal_I2C.o
+                0x000025cc                _ZN5Print17availableForWriteEv
  .text._ZN5Print5flushEv
-                0x000025b0       0x1c src/libraries/LiquidCrystal_I2C-1.1/LiquidCrystal_I2C.o
-                0x000025b0                _ZN5Print5flushEv
+                0x000025ea       0x1c src/libraries/LiquidCrystal_I2C-1.1/LiquidCrystal_I2C.o
+                0x000025ea                _ZN5Print5flushEv
  .text._ZN17LiquidCrystal_I2C5writeEh
-                0x000025cc       0x2a src/libraries/LiquidCrystal_I2C-1.1/LiquidCrystal_I2C.o
-                0x000025cc                _ZN17LiquidCrystal_I2C5writeEh
+                0x00002606       0x2a src/libraries/LiquidCrystal_I2C-1.1/LiquidCrystal_I2C.o
+                0x00002606                _ZN17LiquidCrystal_I2C5writeEh
  .text._ZN17LiquidCrystal_I2CC2Ehhh
-                0x000025f6       0x64 src/libraries/LiquidCrystal_I2C-1.1/LiquidCrystal_I2C.o
-                0x000025f6                _ZN17LiquidCrystal_I2CC1Ehhh
-                0x000025f6                _ZN17LiquidCrystal_I2CC2Ehhh
+                0x00002630       0x64 src/libraries/LiquidCrystal_I2C-1.1/LiquidCrystal_I2C.o
+                0x00002630                _ZN17LiquidCrystal_I2CC1Ehhh
+                0x00002630                _ZN17LiquidCrystal_I2CC2Ehhh
  .text._ZN17LiquidCrystal_I2C4initEv
-                0x0000265a       0x22 src/libraries/LiquidCrystal_I2C-1.1/LiquidCrystal_I2C.o
-                0x0000265a                _ZN17LiquidCrystal_I2C4initEv
+                0x00002694       0x22 src/libraries/LiquidCrystal_I2C-1.1/LiquidCrystal_I2C.o
+                0x00002694                _ZN17LiquidCrystal_I2C4initEv
  .text._ZN17LiquidCrystal_I2C9init_privEv
-                0x0000267c       0x46 src/libraries/LiquidCrystal_I2C-1.1/LiquidCrystal_I2C.o
-                0x0000267c                _ZN17LiquidCrystal_I2C9init_privEv
+                0x000026b6       0x46 src/libraries/LiquidCrystal_I2C-1.1/LiquidCrystal_I2C.o
+                0x000026b6                _ZN17LiquidCrystal_I2C9init_privEv
  .text._ZN17LiquidCrystal_I2C5beginEhhh
-                0x000026c2      0x11c src/libraries/LiquidCrystal_I2C-1.1/LiquidCrystal_I2C.o
-                0x000026c2                _ZN17LiquidCrystal_I2C5beginEhhh
+                0x000026fc      0x11c src/libraries/LiquidCrystal_I2C-1.1/LiquidCrystal_I2C.o
+                0x000026fc                _ZN17LiquidCrystal_I2C5beginEhhh
  .text._ZN17LiquidCrystal_I2C5clearEv
-                0x000027de       0x2c src/libraries/LiquidCrystal_I2C-1.1/LiquidCrystal_I2C.o
-                0x000027de                _ZN17LiquidCrystal_I2C5clearEv
+                0x00002818       0x2c src/libraries/LiquidCrystal_I2C-1.1/LiquidCrystal_I2C.o
+                0x00002818                _ZN17LiquidCrystal_I2C5clearEv
  .text._ZN17LiquidCrystal_I2C4homeEv
-                0x0000280a       0x2c src/libraries/LiquidCrystal_I2C-1.1/LiquidCrystal_I2C.o
-                0x0000280a                _ZN17LiquidCrystal_I2C4homeEv
+                0x00002844       0x2c src/libraries/LiquidCrystal_I2C-1.1/LiquidCrystal_I2C.o
+                0x00002844                _ZN17LiquidCrystal_I2C4homeEv
  .text._ZN17LiquidCrystal_I2C9setCursorEhh
-                0x00002836       0x8a src/libraries/LiquidCrystal_I2C-1.1/LiquidCrystal_I2C.o
-                0x00002836                _ZN17LiquidCrystal_I2C9setCursorEhh
+                0x00002870       0x8a src/libraries/LiquidCrystal_I2C-1.1/LiquidCrystal_I2C.o
+                0x00002870                _ZN17LiquidCrystal_I2C9setCursorEhh
  .text._ZN17LiquidCrystal_I2C7displayEv
-                0x000028c0       0x44 src/libraries/LiquidCrystal_I2C-1.1/LiquidCrystal_I2C.o
-                0x000028c0                _ZN17LiquidCrystal_I2C7displayEv
+                0x000028fa       0x44 src/libraries/LiquidCrystal_I2C-1.1/LiquidCrystal_I2C.o
+                0x000028fa                _ZN17LiquidCrystal_I2C7displayEv
  .text._ZN17LiquidCrystal_I2C9backlightEv
-                0x00002904       0x2e src/libraries/LiquidCrystal_I2C-1.1/LiquidCrystal_I2C.o
-                0x00002904                _ZN17LiquidCrystal_I2C9backlightEv
+                0x0000293e       0x2e src/libraries/LiquidCrystal_I2C-1.1/LiquidCrystal_I2C.o
+                0x0000293e                _ZN17LiquidCrystal_I2C9backlightEv
  .text._ZN17LiquidCrystal_I2C7commandEh
-                0x00002932       0x28 src/libraries/LiquidCrystal_I2C-1.1/LiquidCrystal_I2C.o
-                0x00002932                _ZN17LiquidCrystal_I2C7commandEh
+                0x0000296c       0x28 src/libraries/LiquidCrystal_I2C-1.1/LiquidCrystal_I2C.o
+                0x0000296c                _ZN17LiquidCrystal_I2C7commandEh
  .text._ZN17LiquidCrystal_I2C4sendEhh
-                0x0000295a       0x62 src/libraries/LiquidCrystal_I2C-1.1/LiquidCrystal_I2C.o
-                0x0000295a                _ZN17LiquidCrystal_I2C4sendEhh
+                0x00002994       0x62 src/libraries/LiquidCrystal_I2C-1.1/LiquidCrystal_I2C.o
+                0x00002994                _ZN17LiquidCrystal_I2C4sendEhh
  .text._ZN17LiquidCrystal_I2C10write4bitsEh
-                0x000029bc       0x2e src/libraries/LiquidCrystal_I2C-1.1/LiquidCrystal_I2C.o
-                0x000029bc                _ZN17LiquidCrystal_I2C10write4bitsEh
+                0x000029f6       0x2e src/libraries/LiquidCrystal_I2C-1.1/LiquidCrystal_I2C.o
+                0x000029f6                _ZN17LiquidCrystal_I2C10write4bitsEh
  .text._ZN17LiquidCrystal_I2C13expanderWriteEh
-                0x000029ea       0x52 src/libraries/LiquidCrystal_I2C-1.1/LiquidCrystal_I2C.o
-                0x000029ea                _ZN17LiquidCrystal_I2C13expanderWriteEh
+                0x00002a24       0x52 src/libraries/LiquidCrystal_I2C-1.1/LiquidCrystal_I2C.o
+                0x00002a24                _ZN17LiquidCrystal_I2C13expanderWriteEh
  .text._ZN17LiquidCrystal_I2C11pulseEnableEh
-                0x00002a3c       0x4a src/libraries/LiquidCrystal_I2C-1.1/LiquidCrystal_I2C.o
-                0x00002a3c                _ZN17LiquidCrystal_I2C11pulseEnableEh
+                0x00002a76       0x4a src/libraries/LiquidCrystal_I2C-1.1/LiquidCrystal_I2C.o
+                0x00002a76                _ZN17LiquidCrystal_I2C11pulseEnableEh
  .text._ZN11SPISettingsC2Emhh
-                0x00002a86       0x54 src/libraries/rfid/MFRC522.o
-                0x00002a86                _ZN11SPISettingsC1Emhh
-                0x00002a86                _ZN11SPISettingsC2Emhh
+                0x00002ac0       0x54 src/libraries/rfid/MFRC522.o
+                0x00002ac0                _ZN11SPISettingsC1Emhh
+                0x00002ac0                _ZN11SPISettingsC2Emhh
  .text._ZN11SPISettings16init_MightInlineEmhh
-                0x00002ada       0xfa src/libraries/rfid/MFRC522.o
-                0x00002ada                _ZN11SPISettings16init_MightInlineEmhh
+                0x00002b14       0xfa src/libraries/rfid/MFRC522.o
+                0x00002b14                _ZN11SPISettings16init_MightInlineEmhh
  .text._ZN8SPIClass16beginTransactionE11SPISettings
-                0x00002bd4       0x84 src/libraries/rfid/MFRC522.o
-                0x00002bd4                _ZN8SPIClass16beginTransactionE11SPISettings
+                0x00002c0e       0x84 src/libraries/rfid/MFRC522.o
+                0x00002c0e                _ZN8SPIClass16beginTransactionE11SPISettings
  .text._ZN8SPIClass8transferEh
-                0x00002c58       0x3e src/libraries/rfid/MFRC522.o
-                0x00002c58                _ZN8SPIClass8transferEh
+                0x00002c92       0x3e src/libraries/rfid/MFRC522.o
+                0x00002c92                _ZN8SPIClass8transferEh
  .text._ZN8SPIClass14endTransactionEv
-                0x00002c96       0x54 src/libraries/rfid/MFRC522.o
-                0x00002c96                _ZN8SPIClass14endTransactionEv
+                0x00002cd0       0x54 src/libraries/rfid/MFRC522.o
+                0x00002cd0                _ZN8SPIClass14endTransactionEv
  .text._ZN7MFRC522C2Ehh
-                0x00002cea       0x38 src/libraries/rfid/MFRC522.o
-                0x00002cea                _ZN7MFRC522C2Ehh
-                0x00002cea                _ZN7MFRC522C1Ehh
+                0x00002d24       0x38 src/libraries/rfid/MFRC522.o
+                0x00002d24                _ZN7MFRC522C2Ehh
+                0x00002d24                _ZN7MFRC522C1Ehh
  .text._ZN7MFRC52217PCD_WriteRegisterEhh
-                0x00002d22       0x6a src/libraries/rfid/MFRC522.o
-                0x00002d22                _ZN7MFRC52217PCD_WriteRegisterEhh
+                0x00002d5c       0x6a src/libraries/rfid/MFRC522.o
+                0x00002d5c                _ZN7MFRC52217PCD_WriteRegisterEhh
  .text._ZN7MFRC52217PCD_WriteRegisterEhhPh
-                0x00002d8c       0x98 src/libraries/rfid/MFRC522.o
-                0x00002d8c                _ZN7MFRC52217PCD_WriteRegisterEhhPh
+                0x00002dc6       0x98 src/libraries/rfid/MFRC522.o
+                0x00002dc6                _ZN7MFRC52217PCD_WriteRegisterEhhPh
  .text._ZN7MFRC52216PCD_ReadRegisterEh
-                0x00002e24       0x6c src/libraries/rfid/MFRC522.o
-                0x00002e24                _ZN7MFRC52216PCD_ReadRegisterEh
+                0x00002e5e       0x6c src/libraries/rfid/MFRC522.o
+                0x00002e5e                _ZN7MFRC52216PCD_ReadRegisterEh
  .text._ZN7MFRC52216PCD_ReadRegisterEhhPhh
-                0x00002e90      0x142 src/libraries/rfid/MFRC522.o
-                0x00002e90                _ZN7MFRC52216PCD_ReadRegisterEhhPhh
+                0x00002eca      0x142 src/libraries/rfid/MFRC522.o
+                0x00002eca                _ZN7MFRC52216PCD_ReadRegisterEhhPhh
  .text._ZN7MFRC52222PCD_SetRegisterBitMaskEhh
-                0x00002fd2       0x44 src/libraries/rfid/MFRC522.o
-                0x00002fd2                _ZN7MFRC52222PCD_SetRegisterBitMaskEhh
+                0x0000300c       0x44 src/libraries/rfid/MFRC522.o
+                0x0000300c                _ZN7MFRC52222PCD_SetRegisterBitMaskEhh
  .text._ZN7MFRC52224PCD_ClearRegisterBitMaskEhh
-                0x00003016       0x48 src/libraries/rfid/MFRC522.o
-                0x00003016                _ZN7MFRC52224PCD_ClearRegisterBitMaskEhh
+                0x00003050       0x48 src/libraries/rfid/MFRC522.o
+                0x00003050                _ZN7MFRC52224PCD_ClearRegisterBitMaskEhh
  .text._ZN7MFRC52216PCD_CalculateCRCEPhhS0_
-                0x0000305e       0xe6 src/libraries/rfid/MFRC522.o
-                0x0000305e                _ZN7MFRC52216PCD_CalculateCRCEPhhS0_
+                0x00003098       0xe6 src/libraries/rfid/MFRC522.o
+                0x00003098                _ZN7MFRC52216PCD_CalculateCRCEPhhS0_
  .text._ZN7MFRC5228PCD_InitEv
-                0x00003144       0xc2 src/libraries/rfid/MFRC522.o
-                0x00003144                _ZN7MFRC5228PCD_InitEv
+                0x0000317e       0xc2 src/libraries/rfid/MFRC522.o
+                0x0000317e                _ZN7MFRC5228PCD_InitEv
  .text._ZN7MFRC5229PCD_ResetEv
-                0x00003206       0x50 src/libraries/rfid/MFRC522.o
-                0x00003206                _ZN7MFRC5229PCD_ResetEv
+                0x00003240       0x50 src/libraries/rfid/MFRC522.o
+                0x00003240                _ZN7MFRC5229PCD_ResetEv
  .text._ZN7MFRC52213PCD_AntennaOnEv
-                0x00003256       0x44 src/libraries/rfid/MFRC522.o
-                0x00003256                _ZN7MFRC52213PCD_AntennaOnEv
+                0x00003290       0x44 src/libraries/rfid/MFRC522.o
+                0x00003290                _ZN7MFRC52213PCD_AntennaOnEv
  .text._ZN7MFRC52218PCD_TransceiveDataEPhhS0_S0_S0_hb
-                0x0000329a       0x92 src/libraries/rfid/MFRC522.o
-                0x0000329a                _ZN7MFRC52218PCD_TransceiveDataEPhhS0_S0_S0_hb
+                0x000032d4       0x92 src/libraries/rfid/MFRC522.o
+                0x000032d4                _ZN7MFRC52218PCD_TransceiveDataEPhhS0_S0_S0_hb
  .text._ZN7MFRC52223PCD_CommunicateWithPICCEhhPhhS0_S0_S0_hb
-                0x0000332c      0x26c src/libraries/rfid/MFRC522.o
-                0x0000332c                _ZN7MFRC52223PCD_CommunicateWithPICCEhhPhhS0_S0_S0_hb
+                0x00003366      0x26c src/libraries/rfid/MFRC522.o
+                0x00003366                _ZN7MFRC52223PCD_CommunicateWithPICCEhhPhhS0_S0_S0_hb
  .text._ZN7MFRC52213PICC_RequestAEPhS0_
-                0x00003598       0x3a src/libraries/rfid/MFRC522.o
-                0x00003598                _ZN7MFRC52213PICC_RequestAEPhS0_
+                0x000035d2       0x3a src/libraries/rfid/MFRC522.o
+                0x000035d2                _ZN7MFRC52213PICC_RequestAEPhS0_
  .text._ZN7MFRC52217PICC_REQA_or_WUPAEhPhS0_
-                0x000035d2       0xb8 src/libraries/rfid/MFRC522.o
-                0x000035d2                _ZN7MFRC52217PICC_REQA_or_WUPAEhPhS0_
+                0x0000360c       0xb8 src/libraries/rfid/MFRC522.o
+                0x0000360c                _ZN7MFRC52217PICC_REQA_or_WUPAEhPhS0_
  .text._ZN7MFRC52211PICC_SelectEPNS_3UidEh
-                0x0000368a      0x4a8 src/libraries/rfid/MFRC522.o
-                0x0000368a                _ZN7MFRC52211PICC_SelectEPNS_3UidEh
+                0x000036c4      0x4a8 src/libraries/rfid/MFRC522.o
+                0x000036c4                _ZN7MFRC52211PICC_SelectEPNS_3UidEh
  .text._ZN7MFRC52221PICC_IsNewCardPresentEv
-                0x00003b32       0x4e src/libraries/rfid/MFRC522.o
-                0x00003b32                _ZN7MFRC52221PICC_IsNewCardPresentEv
+                0x00003b6c       0x4e src/libraries/rfid/MFRC522.o
+                0x00003b6c                _ZN7MFRC52221PICC_IsNewCardPresentEv
  .text._ZN7MFRC52219PICC_ReadCardSerialEv
-                0x00003b80       0x34 src/libraries/rfid/MFRC522.o
-                0x00003b80                _ZN7MFRC52219PICC_ReadCardSerialEv
+                0x00003bba       0x34 src/libraries/rfid/MFRC522.o
+                0x00003bba                _ZN7MFRC52219PICC_ReadCardSerialEv
  .text._ZL17handle_interrupts18timer16_Sequence_tPVjS1_
-                0x00003bb4      0x2fc src/libraries/Servo/src/avr/Servo.o
+                0x00003bee      0x2fc src/libraries/Servo/src/avr/Servo.o
  .text.__vector_17
-                0x00003eb0       0x6e src/libraries/Servo/src/avr/Servo.o
-                0x00003eb0                __vector_17
+                0x00003eea       0x6e src/libraries/Servo/src/avr/Servo.o
+                0x00003eea                __vector_17
  .text.__vector_32
-                0x00003f1e       0x6e src/libraries/Servo/src/avr/Servo.o
-                0x00003f1e                __vector_32
+                0x00003f58       0x6e src/libraries/Servo/src/avr/Servo.o
+                0x00003f58                __vector_32
  .text.__vector_42
-                0x00003f8c       0x6e src/libraries/Servo/src/avr/Servo.o
-                0x00003f8c                __vector_42
+                0x00003fc6       0x6e src/libraries/Servo/src/avr/Servo.o
+                0x00003fc6                __vector_42
  .text.__vector_47
-                0x00003ffa       0x6e src/libraries/Servo/src/avr/Servo.o
-                0x00003ffa                __vector_47
+                0x00004034       0x6e src/libraries/Servo/src/avr/Servo.o
+                0x00004034                __vector_47
  .text._ZL7initISR18timer16_Sequence_t
-                0x00004068       0xfe src/libraries/Servo/src/avr/Servo.o
+                0x000040a2       0xfe src/libraries/Servo/src/avr/Servo.o
  .text._ZL13isTimerActive18timer16_Sequence_t
-                0x00004166       0x6e src/libraries/Servo/src/avr/Servo.o
+                0x000041a0       0x6e src/libraries/Servo/src/avr/Servo.o
  .text._ZN5ServoC2Ev
-                0x000041d4       0x68 src/libraries/Servo/src/avr/Servo.o
-                0x000041d4                _ZN5ServoC1Ev
-                0x000041d4                _ZN5ServoC2Ev
+                0x0000420e       0x68 src/libraries/Servo/src/avr/Servo.o
+                0x0000420e                _ZN5ServoC1Ev
+                0x0000420e                _ZN5ServoC2Ev
  .text._ZN5Servo6attachEi
-                0x0000423c       0x34 src/libraries/Servo/src/avr/Servo.o
-                0x0000423c                _ZN5Servo6attachEi
+                0x00004276       0x34 src/libraries/Servo/src/avr/Servo.o
+                0x00004276                _ZN5Servo6attachEi
  .text._ZN5Servo6attachEiii
-                0x00004270      0x122 src/libraries/Servo/src/avr/Servo.o
-                0x00004270                _ZN5Servo6attachEiii
+                0x000042aa      0x122 src/libraries/Servo/src/avr/Servo.o
+                0x000042aa                _ZN5Servo6attachEiii
  .text._ZN5Servo5writeEi
-                0x00004392      0x124 src/libraries/Servo/src/avr/Servo.o
-                0x00004392                _ZN5Servo5writeEi
+                0x000043cc      0x124 src/libraries/Servo/src/avr/Servo.o
+                0x000043cc                _ZN5Servo5writeEi
  .text._ZN5Servo17writeMicrosecondsEi
-                0x000044b6      0x16c src/libraries/Servo/src/avr/Servo.o
-                0x000044b6                _ZN5Servo17writeMicrosecondsEi
+                0x000044f0      0x16c src/libraries/Servo/src/avr/Servo.o
+                0x000044f0                _ZN5Servo17writeMicrosecondsEi
  .text._ZN5Servo4readEv
-                0x00004622       0xea src/libraries/Servo/src/avr/Servo.o
-                0x00004622                _ZN5Servo4readEv
+                0x0000465c       0xea src/libraries/Servo/src/avr/Servo.o
+                0x0000465c                _ZN5Servo4readEv
  .text._ZN5Servo16readMicrosecondsEv
-                0x0000470c       0x72 src/libraries/Servo/src/avr/Servo.o
-                0x0000470c                _ZN5Servo16readMicrosecondsEv
+                0x00004746       0x72 src/libraries/Servo/src/avr/Servo.o
+                0x00004746                _ZN5Servo16readMicrosecondsEv
  .text._ZN8SPIClass5beginEv
-                0x0000477e      0x108 src/libraries/SPI/src/SPI.o
-                0x0000477e                _ZN8SPIClass5beginEv
+                0x000047b8      0x108 src/libraries/SPI/src/SPI.o
+                0x000047b8                _ZN8SPIClass5beginEv
  .text.twi_init
-                0x00004886       0x3c src/libraries/Wire/src/utility/twi.o
-                0x00004886                twi_init
+                0x000048c0       0x3c src/libraries/Wire/src/utility/twi.o
+                0x000048c0                twi_init
  .text.twi_disable
-                0x000048c2       0x1a src/libraries/Wire/src/utility/twi.o
-                0x000048c2                twi_disable
+                0x000048fc       0x1a src/libraries/Wire/src/utility/twi.o
+                0x000048fc                twi_disable
  .text.twi_transmit
-                0x000048dc       0x50 src/libraries/Wire/src/utility/twi.o
-                0x000048dc                twi_transmit
+                0x00004916       0x50 src/libraries/Wire/src/utility/twi.o
+                0x00004916                twi_transmit
  .text.twi_attachSlaveRxEvent
-                0x0000492c        0xa src/libraries/Wire/src/utility/twi.o
-                0x0000492c                twi_attachSlaveRxEvent
+                0x00004966        0xa src/libraries/Wire/src/utility/twi.o
+                0x00004966                twi_attachSlaveRxEvent
  .text.twi_attachSlaveTxEvent
-                0x00004936        0xa src/libraries/Wire/src/utility/twi.o
-                0x00004936                twi_attachSlaveTxEvent
+                0x00004970        0xa src/libraries/Wire/src/utility/twi.o
+                0x00004970                twi_attachSlaveTxEvent
  .text.twi_releaseBus
-                0x00004940        0xc src/libraries/Wire/src/utility/twi.o
-                0x00004940                twi_releaseBus
+                0x0000497a        0xc src/libraries/Wire/src/utility/twi.o
+                0x0000497a                twi_releaseBus
  .text.twi_handleTimeout
-                0x0000494c       0x28 src/libraries/Wire/src/utility/twi.o
-                0x0000494c                twi_handleTimeout
+                0x00004986       0x28 src/libraries/Wire/src/utility/twi.o
+                0x00004986                twi_handleTimeout
  .text.twi_readFrom
-                0x00004974      0x1ce src/libraries/Wire/src/utility/twi.o
-                0x00004974                twi_readFrom
+                0x000049ae      0x1ce src/libraries/Wire/src/utility/twi.o
+                0x000049ae                twi_readFrom
  .text.twi_writeTo
-                0x00004b42      0x1de src/libraries/Wire/src/utility/twi.o
-                0x00004b42                twi_writeTo
+                0x00004b7c      0x1de src/libraries/Wire/src/utility/twi.o
+                0x00004b7c                twi_writeTo
  .text.twi_stop
-                0x00004d20       0x6e src/libraries/Wire/src/utility/twi.o
-                0x00004d20                twi_stop
+                0x00004d5a       0x6e src/libraries/Wire/src/utility/twi.o
+                0x00004d5a                twi_stop
  .text.__vector_39
-                0x00004d8e      0x25c src/libraries/Wire/src/utility/twi.o
-                0x00004d8e                __vector_39
+                0x00004dc8      0x25c src/libraries/Wire/src/utility/twi.o
+                0x00004dc8                __vector_39
  .text._ZN5Print13setWriteErrorEi
-                0x00004fea       0x32 src/libraries/Wire/src/Wire.o
-                0x00004fea                _ZN5Print13setWriteErrorEi
+                0x00005024       0x32 src/libraries/Wire/src/Wire.o
+                0x00005024                _ZN5Print13setWriteErrorEi
  .text._ZN6StreamC2Ev
-                0x0000501c       0x48 src/libraries/Wire/src/Wire.o
-                0x0000501c                _ZN6StreamC1Ev
-                0x0000501c                _ZN6StreamC2Ev
+                0x00005056       0x48 src/libraries/Wire/src/Wire.o
+                0x00005056                _ZN6StreamC1Ev
+                0x00005056                _ZN6StreamC2Ev
  .text._ZN7TwoWireC2Ev
-                0x00005064       0x30 src/libraries/Wire/src/Wire.o
-                0x00005064                _ZN7TwoWireC1Ev
-                0x00005064                _ZN7TwoWireC2Ev
+                0x0000509e       0x30 src/libraries/Wire/src/Wire.o
+                0x0000509e                _ZN7TwoWireC1Ev
+                0x0000509e                _ZN7TwoWireC2Ev
  .text._ZN7TwoWire5beginEv
-                0x00005094       0x3a src/libraries/Wire/src/Wire.o
-                0x00005094                _ZN7TwoWire5beginEv
+                0x000050ce       0x3a src/libraries/Wire/src/Wire.o
+                0x000050ce                _ZN7TwoWire5beginEv
  .text._ZN7TwoWire11requestFromEhhmhh
-                0x000050ce       0xea src/libraries/Wire/src/Wire.o
-                0x000050ce                _ZN7TwoWire11requestFromEhhmhh
+                0x00005108       0xea src/libraries/Wire/src/Wire.o
+                0x00005108                _ZN7TwoWire11requestFromEhhmhh
  .text._ZN7TwoWire11requestFromEhhh
-                0x000051b8       0x4c src/libraries/Wire/src/Wire.o
-                0x000051b8                _ZN7TwoWire11requestFromEhhh
+                0x000051f2       0x4c src/libraries/Wire/src/Wire.o
+                0x000051f2                _ZN7TwoWire11requestFromEhhh
  .text._ZN7TwoWire11requestFromEii
-                0x00005204       0x38 src/libraries/Wire/src/Wire.o
-                0x00005204                _ZN7TwoWire11requestFromEii
+                0x0000523e       0x38 src/libraries/Wire/src/Wire.o
+                0x0000523e                _ZN7TwoWire11requestFromEii
  .text._ZN7TwoWire17beginTransmissionEh
-                0x0000523c       0x32 src/libraries/Wire/src/Wire.o
-                0x0000523c                _ZN7TwoWire17beginTransmissionEh
+                0x00005276       0x32 src/libraries/Wire/src/Wire.o
+                0x00005276                _ZN7TwoWire17beginTransmissionEh
  .text._ZN7TwoWire17beginTransmissionEi
-                0x0000526e       0x2e src/libraries/Wire/src/Wire.o
-                0x0000526e                _ZN7TwoWire17beginTransmissionEi
+                0x000052a8       0x2e src/libraries/Wire/src/Wire.o
+                0x000052a8                _ZN7TwoWire17beginTransmissionEi
  .text._ZN7TwoWire15endTransmissionEh
-                0x0000529c       0x48 src/libraries/Wire/src/Wire.o
-                0x0000529c                _ZN7TwoWire15endTransmissionEh
+                0x000052d6       0x48 src/libraries/Wire/src/Wire.o
+                0x000052d6                _ZN7TwoWire15endTransmissionEh
  .text._ZN7TwoWire15endTransmissionEv
-                0x000052e4       0x22 src/libraries/Wire/src/Wire.o
-                0x000052e4                _ZN7TwoWire15endTransmissionEv
+                0x0000531e       0x22 src/libraries/Wire/src/Wire.o
+                0x0000531e                _ZN7TwoWire15endTransmissionEv
  .text._ZN7TwoWire5writeEh
-                0x00005306       0x6e src/libraries/Wire/src/Wire.o
-                0x00005306                _ZN7TwoWire5writeEh
+                0x00005340       0x6e src/libraries/Wire/src/Wire.o
+                0x00005340                _ZN7TwoWire5writeEh
  .text._ZN7TwoWire5writeEPKhj
-                0x00005374       0x90 src/libraries/Wire/src/Wire.o
-                0x00005374                _ZN7TwoWire5writeEPKhj
+                0x000053ae       0x90 src/libraries/Wire/src/Wire.o
+                0x000053ae                _ZN7TwoWire5writeEPKhj
  .text._ZN7TwoWire9availableEv
-                0x00005404       0x32 src/libraries/Wire/src/Wire.o
-                0x00005404                _ZN7TwoWire9availableEv
+                0x0000543e       0x32 src/libraries/Wire/src/Wire.o
+                0x0000543e                _ZN7TwoWire9availableEv
  .text._ZN7TwoWire4readEv
-                0x00005436       0x58 src/libraries/Wire/src/Wire.o
-                0x00005436                _ZN7TwoWire4readEv
+                0x00005470       0x58 src/libraries/Wire/src/Wire.o
+                0x00005470                _ZN7TwoWire4readEv
  .text._ZN7TwoWire4peekEv
-                0x0000548e       0x4e src/libraries/Wire/src/Wire.o
-                0x0000548e                _ZN7TwoWire4peekEv
+                0x000054c8       0x4e src/libraries/Wire/src/Wire.o
+                0x000054c8                _ZN7TwoWire4peekEv
  .text._ZN7TwoWire5flushEv
-                0x000054dc       0x1c src/libraries/Wire/src/Wire.o
-                0x000054dc                _ZN7TwoWire5flushEv
+                0x00005516       0x1c src/libraries/Wire/src/Wire.o
+                0x00005516                _ZN7TwoWire5flushEv
  .text._ZN7TwoWire16onReceiveServiceEPhi
-                0x000054f8       0x9a src/libraries/Wire/src/Wire.o
-                0x000054f8                _ZN7TwoWire16onReceiveServiceEPhi
+                0x00005532       0x9a src/libraries/Wire/src/Wire.o
+                0x00005532                _ZN7TwoWire16onReceiveServiceEPhi
  .text._ZN7TwoWire16onRequestServiceEv
-                0x00005592       0x32 src/libraries/Wire/src/Wire.o
-                0x00005592                _ZN7TwoWire16onRequestServiceEv
+                0x000055cc       0x32 src/libraries/Wire/src/Wire.o
+                0x000055cc                _ZN7TwoWire16onRequestServiceEv
  .text._Z41__static_initialization_and_destruction_0ii
-                0x000055c4       0x3a src/libraries/Wire/src/Wire.o
+                0x000055fe       0x3a src/libraries/Wire/src/Wire.o
  .text._GLOBAL__sub_I__ZN7TwoWire8rxBufferE
-                0x000055fe       0x18 src/libraries/Wire/src/Wire.o
+                0x00005638       0x18 src/libraries/Wire/src/Wire.o
  .text.avr-libc.fplib
-                0x00005616        0xa c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(addsf3.o)
-                0x00005616                __subsf3
-                0x00005618                __addsf3
+                0x00005650        0xa c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(addsf3.o)
+                0x00005650                __subsf3
+                0x00005652                __addsf3
  .text.avr-libc.fplib
-                0x00005620       0xc0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(addsf3x.o)
-                0x0000563a                __addsf3x
+                0x0000565a       0xc0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(addsf3x.o)
+                0x00005674                __addsf3x
  .text.avr-libc.fplib
-                0x000056e0        0xa c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(fixsfsi.o)
-                0x000056e0                __fixsfsi
+                0x0000571a        0xa c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(fixsfsi.o)
+                0x0000571a                __fixsfsi
  .text.avr-libc.fplib
-                0x000056ea       0x58 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(fixunssfsi.o)
-                0x000056ea                __fixunssfsi
+                0x00005724       0x58 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(fixunssfsi.o)
+                0x00005724                __fixunssfsi
  .text.avr-libc.fplib
-                0x00005742       0x7a c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(floatsisf.o)
-                0x00005742                __floatunsisf
-                0x00005746                __floatsisf
+                0x0000577c       0x7a c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(floatsisf.o)
+                0x0000577c                __floatunsisf
+                0x00005780                __floatsisf
  .text.avr-libc.fplib
-                0x000057bc       0x48 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(fp_cmp.o)
-                0x000057bc                __fp_cmp
+                0x000057f6       0x48 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(fp_cmp.o)
+                0x000057f6                __fp_cmp
  .text.avr-libc.fplib
-                0x00005804        0xc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(fp_inf.o)
-                0x00005804                __fp_inf
+                0x0000583e        0xc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(fp_inf.o)
+                0x0000583e                __fp_inf
  .text.avr-libc.fplib
-                0x00005810        0x6 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(fp_nan.o)
-                0x00005810                __fp_nan
+                0x0000584a        0x6 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(fp_nan.o)
+                0x0000584a                __fp_nan
  .text.avr-libc.fplib
-                0x00005816        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(fp_pscA.o)
-                0x00005816                __fp_pscA
+                0x00005850        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(fp_pscA.o)
+                0x00005850                __fp_pscA
  .text.avr-libc.fplib
-                0x00005824        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(fp_pscB.o)
-                0x00005824                __fp_pscB
+                0x0000585e        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(fp_pscB.o)
+                0x0000585e                __fp_pscB
  .text.avr-libc.fplib
-                0x00005832       0x22 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(fp_round.o)
-                0x00005832                __fp_round
+                0x0000586c       0x22 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(fp_round.o)
+                0x0000586c                __fp_round
  .text.avr-libc.fplib
-                0x00005854       0x44 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(fp_split3.o)
-                0x00005854                __fp_split3
-                0x00005864                __fp_splitA
+                0x0000588e       0x44 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(fp_split3.o)
+                0x0000588e                __fp_split3
+                0x0000589e                __fp_splitA
  .text.avr-libc.fplib
-                0x00005898        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(fp_zero.o)
-                0x00005898                __fp_zero
-                0x0000589a                __fp_szero
+                0x000058d2        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(fp_zero.o)
+                0x000058d2                __fp_zero
+                0x000058d4                __fp_szero
  .text.avr-libc.fplib
-                0x000058a6        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(mulsf3.o)
-                0x000058a6                __mulsf3
+                0x000058e0        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(mulsf3.o)
+                0x000058e0                __mulsf3
  .text.avr-libc.fplib
-                0x000058aa       0xc2 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(mulsf3x.o)
-                0x000058be                __mulsf3x
-                0x000058c2                __mulsf3_pse
+                0x000058e4       0xc2 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(mulsf3x.o)
+                0x000058f8                __mulsf3x
+                0x000058fc                __mulsf3_pse
  .text.avr-libc.fplib
-                0x0000596c        0x8 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(unordsf2.o)
-                0x0000596c                __unordsf2
+                0x000059a6        0x8 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(unordsf2.o)
+                0x000059a6                __unordsf2
  .text.__cxa_pure_virtual
-                0x00005974        0x4 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(abi.o)
-                0x00005974                __cxa_pure_virtual
+                0x000059ae        0x4 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(abi.o)
+                0x000059ae                __cxa_pure_virtual
  .text._ZN14HardwareSerial9availableEv
-                0x00005978       0x18 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
-                0x00005978                _ZN14HardwareSerial9availableEv
+                0x000059b2       0x18 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
+                0x000059b2                _ZN14HardwareSerial9availableEv
  .text._ZN14HardwareSerial4peekEv
-                0x00005990       0x1c C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
-                0x00005990                _ZN14HardwareSerial4peekEv
+                0x000059ca       0x1c C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
+                0x000059ca                _ZN14HardwareSerial4peekEv
  .text._ZN14HardwareSerial4readEv
-                0x000059ac       0x28 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
-                0x000059ac                _ZN14HardwareSerial4readEv
+                0x000059e6       0x28 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
+                0x000059e6                _ZN14HardwareSerial4readEv
  .text._ZN14HardwareSerial17availableForWriteEv
-                0x000059d4       0x1e C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
-                0x000059d4                _ZN14HardwareSerial17availableForWriteEv
+                0x00005a0e       0x1e C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
+                0x00005a0e                _ZN14HardwareSerial17availableForWriteEv
  .text._Z14serialEventRunv
-                0x000059f2       0x78 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
-                0x000059f2                _Z14serialEventRunv
+                0x00005a2c       0x78 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
+                0x00005a2c                _Z14serialEventRunv
  .text._ZN14HardwareSerial17_tx_udr_empty_irqEv
-                0x00005a6a       0x44 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
-                0x00005a6a                _ZN14HardwareSerial17_tx_udr_empty_irqEv
+                0x00005aa4       0x44 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
+                0x00005aa4                _ZN14HardwareSerial17_tx_udr_empty_irqEv
  .text._ZN14HardwareSerial5writeEh
-                0x00005aae       0x98 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
-                0x00005aae                _ZN14HardwareSerial5writeEh
+                0x00005ae8       0x98 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
+                0x00005ae8                _ZN14HardwareSerial5writeEh
  .text._ZN14HardwareSerial5flushEv
-                0x00005b46       0x42 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
-                0x00005b46                _ZN14HardwareSerial5flushEv
+                0x00005b80       0x42 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
+                0x00005b80                _ZN14HardwareSerial5flushEv
  .text._ZN14HardwareSerial5beginEmh
-                0x00005b88       0xc6 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
-                0x00005b88                _ZN14HardwareSerial5beginEmh
+                0x00005bc2       0xc6 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
+                0x00005bc2                _ZN14HardwareSerial5beginEmh
  .text.__vector_25
-                0x00005c4e       0x6c C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial0.o)
-                0x00005c4e                __vector_25
+                0x00005c88       0x6c C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial0.o)
+                0x00005c88                __vector_25
  .text.__vector_26
-                0x00005cba       0x52 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial0.o)
-                0x00005cba                __vector_26
+                0x00005cf4       0x52 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial0.o)
+                0x00005cf4                __vector_26
  .text._Z17Serial0_availablev
-                0x00005d0c       0x12 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial0.o)
-                0x00005d0c                _Z17Serial0_availablev
+                0x00005d46       0x12 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial0.o)
+                0x00005d46                _Z17Serial0_availablev
  .text.startup._GLOBAL__sub_I___vector_25
-                0x00005d1e       0x5a C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial0.o)
+                0x00005d58       0x5a C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial0.o)
  .text.initVariant
-                0x00005d78        0x2 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(main.o)
-                0x00005d78                initVariant
+                0x00005db2        0x2 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(main.o)
+                0x00005db2                initVariant
  .text.startup.main
-                0x00005d7a       0x18 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(main.o)
-                0x00005d7a                main
- .text._ZdlPv   0x00005d92        0x2 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(new.o)
-                0x00005d92                _ZdlPv
+                0x00005db4       0x18 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(main.o)
+                0x00005db4                main
+ .text._ZdlPv   0x00005dcc        0x2 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(new.o)
+                0x00005dcc                _ZdlPv
  .text._ZN5Print5writeEPKhj
-                0x00005d94       0x54 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
-                0x00005d94                _ZN5Print5writeEPKhj
+                0x00005dce       0x54 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
+                0x00005dce                _ZN5Print5writeEPKhj
  .text._ZN5Print5printERK6String
-                0x00005de8       0x1c C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
-                0x00005de8                _ZN5Print5printERK6String
+                0x00005e22       0x1c C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
+                0x00005e22                _ZN5Print5printERK6String
+ .text._ZN5Print5printEPKc
+                0x00005e3e        0x4 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
+                0x00005e3e                _ZN5Print5printEPKc
  .text._ZN5Print5printEc
-                0x00005e04        0xe C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
-                0x00005e04                _ZN5Print5printEc
+                0x00005e42        0xe C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
+                0x00005e42                _ZN5Print5printEc
  .text._ZN5Print7printlnEv
-                0x00005e12        0x8 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
-                0x00005e12                _ZN5Print7printlnEv
+                0x00005e50        0x8 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
+                0x00005e50                _ZN5Print7printlnEv
  .text._ZN5Print7printlnERK6String
-                0x00005e1a       0x20 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
-                0x00005e1a                _ZN5Print7printlnERK6String
+                0x00005e58       0x20 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
+                0x00005e58                _ZN5Print7printlnERK6String
  .text._ZN5Print7printlnEPKc
-                0x00005e3a       0x22 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
-                0x00005e3a                _ZN5Print7printlnEPKc
+                0x00005e78       0x22 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
+                0x00005e78                _ZN5Print7printlnEPKc
  .text._ZN5Print11printNumberEmh
-                0x00005e5c       0x90 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
-                0x00005e5c                _ZN5Print11printNumberEmh
+                0x00005e9a       0x90 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
+                0x00005e9a                _ZN5Print11printNumberEmh
  .text._ZN5Print5printEli
-                0x00005eec       0x8a C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
-                0x00005eec                _ZN5Print5printEli
+                0x00005f2a       0x8a C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
+                0x00005f2a                _ZN5Print5printEli
  .text._ZN5Print5printEii
-                0x00005f76        0xc C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
-                0x00005f76                _ZN5Print5printEii
+                0x00005fb4        0xc C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
+                0x00005fb4                _ZN5Print5printEii
  .text.__vector_23
-                0x00005f82       0x94 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
-                0x00005f82                __vector_23
- .text.millis   0x00006016       0x18 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
-                0x00006016                millis
- .text.micros   0x0000602e       0x4a C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
-                0x0000602e                micros
- .text.delay    0x00006078       0x72 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
-                0x00006078                delay
+                0x00005fc0       0x94 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
+                0x00005fc0                __vector_23
+ .text.millis   0x00006054       0x18 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
+                0x00006054                millis
+ .text.micros   0x0000606c       0x4a C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
+                0x0000606c                micros
+ .text.delay    0x000060b6       0x72 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
+                0x000060b6                delay
  .text.delayMicroseconds
-                0x000060ea       0x16 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
-                0x000060ea                delayMicroseconds
- .text.init     0x00006100       0xc4 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
-                0x00006100                init
+                0x00006128       0x16 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
+                0x00006128                delayMicroseconds
+ .text.init     0x0000613e       0xc4 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
+                0x0000613e                init
  .text.turnOffPWM
-                0x000061c4       0xaa C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(wiring_digital.o)
- .text.pinMode  0x0000626e       0x78 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(wiring_digital.o)
-                0x0000626e                pinMode
+                0x00006202       0xaa C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(wiring_digital.o)
+ .text.pinMode  0x000062ac       0x78 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(wiring_digital.o)
+                0x000062ac                pinMode
  .text.digitalWrite
-                0x000062e6       0x5c C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(wiring_digital.o)
-                0x000062e6                digitalWrite
+                0x00006324       0x5c C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(wiring_digital.o)
+                0x00006324                digitalWrite
  .text.digitalRead
-                0x00006342       0x50 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(wiring_digital.o)
-                0x00006342                digitalRead
+                0x00006380       0x50 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(wiring_digital.o)
+                0x00006380                digitalRead
  .text._Z3maplllll
-                0x00006392       0x7e C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(WMath.o)
-                0x00006392                _Z3maplllll
+                0x000063d0       0x7e C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(WMath.o)
+                0x000063d0                _Z3maplllll
  .text._ZNK6String14StringIfHelperEv
-                0x00006410        0x2 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
-                0x00006410                _ZNK6String14StringIfHelperEv
+                0x0000644e        0x2 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
+                0x0000644e                _ZNK6String14StringIfHelperEv
  .text._ZN6StringD2Ev
-                0x00006412        0xe C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
-                0x00006412                _ZN6StringD2Ev
-                0x00006412                _ZN6StringD1Ev
+                0x00006450        0xe C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
+                0x00006450                _ZN6StringD2Ev
+                0x00006450                _ZN6StringD1Ev
  .text._ZN6String10invalidateEv
-                0x00006420       0x22 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
-                0x00006420                _ZN6String10invalidateEv
+                0x0000645e       0x22 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
+                0x0000645e                _ZN6String10invalidateEv
  .text._ZN6String12changeBufferEj
-                0x00006442       0x32 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
-                0x00006442                _ZN6String12changeBufferEj
+                0x00006480       0x32 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
+                0x00006480                _ZN6String12changeBufferEj
  .text._ZN6String7reserveEj
-                0x00006474       0x36 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
-                0x00006474                _ZN6String7reserveEj
+                0x000064b2       0x36 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
+                0x000064b2                _ZN6String7reserveEj
  .text._ZN6String4copyEPKcj
-                0x000064aa       0x3c C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
-                0x000064aa                _ZN6String4copyEPKcj
+                0x000064e8       0x3c C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
+                0x000064e8                _ZN6String4copyEPKcj
  .text._ZN6StringC2EPKc
-                0x000064e6       0x28 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
-                0x000064e6                _ZN6StringC2EPKc
-                0x000064e6                _ZN6StringC1EPKc
+                0x00006524       0x28 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
+                0x00006524                _ZN6StringC2EPKc
+                0x00006524                _ZN6StringC1EPKc
  .text._ZN6String4moveERS_
-                0x0000650e       0x76 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
-                0x0000650e                _ZN6String4moveERS_
+                0x0000654c       0x76 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
+                0x0000654c                _ZN6String4moveERS_
  .text._ZN6StringaSEOS_
-                0x00006584       0x16 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
-                0x00006584                _ZN6StringaSEOS_
+                0x000065c2       0x16 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
+                0x000065c2                _ZN6StringaSEOS_
  .text._ZN6StringaSEPKc
-                0x0000659a       0x2a C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
-                0x0000659a                _ZN6StringaSEPKc
+                0x000065d8       0x2a C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
+                0x000065d8                _ZN6StringaSEPKc
  .text._ZN6StringC2Ehh
-                0x000065c4       0x56 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
-                0x000065c4                _ZN6StringC2Ehh
-                0x000065c4                _ZN6StringC1Ehh
+                0x00006602       0x56 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
+                0x00006602                _ZN6StringC2Ehh
+                0x00006602                _ZN6StringC1Ehh
  .text._ZN6String6concatEPKcj
-                0x0000661a       0x58 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
-                0x0000661a                _ZN6String6concatEPKcj
+                0x00006658       0x58 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
+                0x00006658                _ZN6String6concatEPKcj
  .text._ZN6String6concatERKS_
-                0x00006672        0xc C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
-                0x00006672                _ZN6String6concatERKS_
+                0x000066b0        0xc C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
+                0x000066b0                _ZN6String6concatERKS_
  .text._ZN6String6concatEc
-                0x0000667e       0x26 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
-                0x0000667e                _ZN6String6concatEc
+                0x000066bc       0x26 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
+                0x000066bc                _ZN6String6concatEc
  .text._ZN6String6concatEi
-                0x000066a4       0x5c C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
-                0x000066a4                _ZN6String6concatEi
+                0x000066e2       0x5c C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
+                0x000066e2                _ZN6String6concatEi
  .text._ZNK6String9compareToERKS_
-                0x00006700       0x5e C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
-                0x00006700                _ZNK6String9compareToERKS_
+                0x0000673e       0x5e C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
+                0x0000673e                _ZNK6String9compareToERKS_
  .text._ZNK6String6equalsERKS_
-                0x0000675e       0x20 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
-                0x0000675e                _ZNK6String6equalsERKS_
+                0x0000679c       0x20 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
+                0x0000679c                _ZNK6String6equalsERKS_
  .text._ZNK6String6equalsEPKc
-                0x0000677e       0x3c C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
-                0x0000677e                _ZNK6String6equalsEPKc
+                0x000067bc       0x3c C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
+                0x000067bc                _ZNK6String6equalsEPKc
  .text._ZNK6String9substringEjj
-                0x000067ba       0x86 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
-                0x000067ba                _ZNK6String9substringEjj
+                0x000067f8       0x86 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
+                0x000067f8                _ZNK6String9substringEjj
  .text._ZN6String11toUpperCaseEv
-                0x00006840       0x22 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
-                0x00006840                _ZN6String11toUpperCaseEv
- .text.__empty  0x00006862        0x2 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(hooks.o)
-                0x00006862                yield
+                0x0000687e       0x22 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
+                0x0000687e                _ZN6String11toUpperCaseEv
+ .text.__empty  0x000068a0        0x2 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(hooks.o)
+                0x000068a0                yield
  .text.libgcc.mul
-                0x00006864       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_mulsi3.o)
-                0x00006864                __mulsi3
+                0x000068a2       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_mulsi3.o)
+                0x000068a2                __mulsi3
  .text.libgcc.div
-                0x00006882       0x44 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_udivmodsi4.o)
-                0x00006882                __udivmodsi4
+                0x000068c0       0x44 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_udivmodsi4.o)
+                0x000068c0                __udivmodsi4
  .text.libgcc.div
-                0x000068c6       0x28 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_divmodsi4.o)
-                0x000068c6                __divmodsi4
+                0x00006904       0x28 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_divmodsi4.o)
+                0x00006904                __divmodsi4
  .text.libgcc.div
-                0x000068ee       0x10 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_negsi2.o)
-                0x000068ee                __negsi2
- .text.libgcc   0x000068fe       0x10 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_tablejump2.o)
-                0x000068fe                __tablejump2__
+                0x0000692c       0x10 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_negsi2.o)
+                0x0000692c                __negsi2
+ .text.libgcc   0x0000693c       0x10 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_tablejump2.o)
+                0x0000693c                __tablejump2__
  .text.libgcc.mul
-                0x0000690e       0x14 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_muluhisi3.o)
-                0x0000690e                __muluhisi3
+                0x0000694c       0x14 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_muluhisi3.o)
+                0x0000694c                __muluhisi3
  .text.libgcc.mul
-                0x00006922       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_umulhisi3.o)
-                0x00006922                __umulhisi3
+                0x00006960       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_umulhisi3.o)
+                0x00006960                __umulhisi3
  .text.avr-libc
-                0x00006940      0x242 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(malloc.o)
-                0x00006940                malloc
-                0x00006a70                free
+                0x0000697e      0x242 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(malloc.o)
+                0x0000697e                malloc
+                0x00006aae                free
  .text.avr-libc
-                0x00006b82      0x1c0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(realloc.o)
-                0x00006b82                realloc
+                0x00006bc0      0x1c0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(realloc.o)
+                0x00006bc0                realloc
  .text.avr-libc
-                0x00006d42        0x8 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(abort.o)
-                0x00006d42                abort
+                0x00006d80        0x8 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(abort.o)
+                0x00006d80                abort
  .text.avr-libc
-                0x00006d4a       0x10 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(toupper.o)
-                0x00006d4a                toupper
+                0x00006d88       0x10 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(toupper.o)
+                0x00006d88                toupper
  .text.avr-libc
-                0x00006d5a       0x12 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(memcpy.o)
-                0x00006d5a                memcpy
+                0x00006d98       0x12 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(memcpy.o)
+                0x00006d98                memcpy
  .text.avr-libc
-                0x00006d6c        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(memset.o)
-                0x00006d6c                memset
+                0x00006daa        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(memset.o)
+                0x00006daa                memset
  .text.avr-libc
-                0x00006d7a       0x12 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(strcmp.o)
-                0x00006d7a                strcmp
+                0x00006db8       0x12 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(strcmp.o)
+                0x00006db8                strcmp
  .text.avr-libc
-                0x00006d8c        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(strcpy.o)
-                0x00006d8c                strcpy
+                0x00006dca        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(strcpy.o)
+                0x00006dca                strcpy
  .text.avr-libc
-                0x00006d9a       0x12 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(strlen.o)
-                0x00006d9a                strlen
+                0x00006dd8       0x12 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(strlen.o)
+                0x00006dd8                strlen
  .text.avr-libc
-                0x00006dac       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(strncpy.o)
-                0x00006dac                strncpy
+                0x00006dea       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(strncpy.o)
+                0x00006dea                strncpy
  .text.avr-libc
-                0x00006dca       0x14 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(itoa_ncheck.o)
-                0x00006dca                __itoa_ncheck
+                0x00006e08       0x14 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(itoa_ncheck.o)
+                0x00006e08                __itoa_ncheck
  .text.avr-libc
-                0x00006dde       0x14 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(utoa.o)
-                0x00006dde                __utoa
-                0x00006dde                utoa
+                0x00006e1c       0x14 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(utoa.o)
+                0x00006e1c                __utoa
+                0x00006e1c                utoa
  .text.avr-libc
-                0x00006df2       0x32 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(utoa_ncheck.o)
-                0x00006df2                __utoa_ncheck
-                0x00006df4                __utoa_common
+                0x00006e30       0x32 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(utoa_ncheck.o)
+                0x00006e30                __utoa_ncheck
+                0x00006e32                __utoa_common
  .text.avr-libc
-                0x00006e24       0x20 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(strrev.o)
-                0x00006e24                strrev
-                0x00006e44                . = ALIGN (0x2)
+                0x00006e62       0x20 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(strrev.o)
+                0x00006e62                strrev
+                0x00006e82                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00006e44        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_exit.o)
-                0x00006e44                _exit
-                0x00006e44                exit
+ .fini9         0x00006e82        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_exit.o)
+                0x00006e82                _exit
+                0x00006e82                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
  *(.fini7)
  *(.fini7)
  *(.fini6)
- .fini6         0x00006e44       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_dtors.o)
-                0x00006e44                __do_global_dtors
+ .fini6         0x00006e82       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_dtors.o)
+                0x00006e82                __do_global_dtors
  *(.fini6)
  *(.fini5)
  *(.fini5)
@@ -2935,11 +2936,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00006e62        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_exit.o)
+ .fini0         0x00006ea0        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_exit.o)
  *(.fini0)
-                0x00006e66                _etext = .
+                0x00006ea4                _etext = .
 
-.data           0x00800200      0x14a load address 0x00006e66
+.data           0x00800200      0x14a load address 0x00006ea4
                 0x00800200                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800200        0x6 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(malloc.o)
@@ -3128,8 +3129,8 @@ END GROUP
                 0x008005ac                __brkval
                 0x008005ae                __flp
                 0x008005b0                PROVIDE (__bss_end, .)
-                0x00006e66                __data_load_start = LOADADDR (.data)
-                0x00006fb0                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00006ea4                __data_load_start = LOADADDR (.data)
+                0x00006fee                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x008005b0        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
@@ -3315,29 +3316,29 @@ END GROUP
  .debug_abbrev  0x00003f07      0x4c2 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
  .debug_abbrev  0x000043c9       0x2a C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(hooks.o)
 
-.debug_line     0x00000000     0x811a
+.debug_line     0x00000000     0x8132
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x1fa C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega2560/avr6/crtatmega2560.o
- .debug_line    0x000001fa      0x9e8 main.o
- .debug_line    0x00000be2      0x63c src/libraries/DHT-sensor-library/DHT.o
- .debug_line    0x0000121e      0x59c src/libraries/DHT-sensor-library/DHT_U.o
- .debug_line    0x000017ba      0x90c src/libraries/LiquidCrystal_I2C-1.1/LiquidCrystal_I2C.o
- .debug_line    0x000020c6     0x1d8c src/libraries/rfid/MFRC522.o
- .debug_line    0x00003e52      0x598 src/libraries/Servo/src/avr/Servo.o
- .debug_line    0x000043ea      0x36d src/libraries/SPI/src/SPI.o
- .debug_line    0x00004757      0x6db src/libraries/Wire/src/utility/twi.o
- .debug_line    0x00004e32      0x736 src/libraries/Wire/src/Wire.o
- .debug_line    0x00005568       0xa9 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(abi.o)
- .debug_line    0x00005611      0x527 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
- .debug_line    0x00005b38      0x288 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial0.o)
- .debug_line    0x00005dc0      0x161 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(main.o)
- .debug_line    0x00005f21      0x145 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(new.o)
- .debug_line    0x00006066      0x681 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
- .debug_line    0x000066e7      0x2cb C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
- .debug_line    0x000069b2      0x284 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(wiring_digital.o)
- .debug_line    0x00006c36      0x143 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(WMath.o)
- .debug_line    0x00006d79     0x1360 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
- .debug_line    0x000080d9       0x41 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(hooks.o)
+ .debug_line    0x000001fa      0xa00 main.o
+ .debug_line    0x00000bfa      0x63c src/libraries/DHT-sensor-library/DHT.o
+ .debug_line    0x00001236      0x59c src/libraries/DHT-sensor-library/DHT_U.o
+ .debug_line    0x000017d2      0x90c src/libraries/LiquidCrystal_I2C-1.1/LiquidCrystal_I2C.o
+ .debug_line    0x000020de     0x1d8c src/libraries/rfid/MFRC522.o
+ .debug_line    0x00003e6a      0x598 src/libraries/Servo/src/avr/Servo.o
+ .debug_line    0x00004402      0x36d src/libraries/SPI/src/SPI.o
+ .debug_line    0x0000476f      0x6db src/libraries/Wire/src/utility/twi.o
+ .debug_line    0x00004e4a      0x736 src/libraries/Wire/src/Wire.o
+ .debug_line    0x00005580       0xa9 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(abi.o)
+ .debug_line    0x00005629      0x527 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
+ .debug_line    0x00005b50      0x288 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial0.o)
+ .debug_line    0x00005dd8      0x161 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(main.o)
+ .debug_line    0x00005f39      0x145 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(new.o)
+ .debug_line    0x0000607e      0x681 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
+ .debug_line    0x000066ff      0x2cb C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
+ .debug_line    0x000069ca      0x284 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(wiring_digital.o)
+ .debug_line    0x00006c4e      0x143 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(WMath.o)
+ .debug_line    0x00006d91     0x1360 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
+ .debug_line    0x000080f1       0x41 C:\Users\kasjac\Desktop\Skole\H5\UGE03-~1\PROJEC~1\DETINT~1\ATMELM~1\ARDUIN~1\Debug\libArduinoCore.a(hooks.o)
 
 .debug_frame    0x00000000     0x36d8
  *(.debug_frame)
