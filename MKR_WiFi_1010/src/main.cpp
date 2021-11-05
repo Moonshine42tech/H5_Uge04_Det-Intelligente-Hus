@@ -3,12 +3,9 @@
 #include <WiFiNINA.h>               // Enables Wi-Fi
 #include <WiFi_secrets.h>           // Wi-Fi credentials
 #include <thingspeak._secrets.h>    // thingspeak API and MQTT credentials
-#include "ThingSpeak.h" 
+#include "ThingSpeak.h"             // Bruger dette til at ThingSpeak API
+//#include <MQTT.h>                   // Jeg bruger dette til at hente data ned for ThingSpeak
 
-// test
-// #include <LiquidCrystal.h>
-
-// LiquidCrystal_I2C lcd(0x27,20,4);
 
 // function declarations
 void receiveDataEvent(int howMany);
@@ -55,28 +52,10 @@ void setup()
 #pragma endregion Wi-Fi
 
   ThingSpeak.begin(client);  //Initialize ThingSpeak
-
-
-  // test
-  // lcd.init();                      // initialize the lcd 
-  // lcd.init();
-  // // Print a message to the LCD.
-  // lcd.backlight();
-  // lcd.setCursor(1,0);
-  // lcd.print("hello everyone");
-  // lcd.setCursor(1,1);
-  // lcd.print("konichiwaa");
 }
 
 void loop() 
 {
-  // test
-  // // set the cursor to column 0, line 1
-  // // (note: line 1 is the second row, since counting begins with 0):
-  // lcd.setCursor(0, 1);
-  // // print the number of seconds since reset:
-  // lcd.print(millis() / 1000);
-  
 
 #pragma region Connect/reconnect to Wi-Fi
 
