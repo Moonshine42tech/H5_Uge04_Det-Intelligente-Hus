@@ -76,7 +76,7 @@ lav et "proof of concept" der kan demonstrere følgene krav.
         * En servo motor skal vise døren der åbner/lukker.
         * Døren skal kunne styres både trådløst (via MQTT) og via RFID kort/chip
 
-* Et 'stort display' der skal vise den sidste ændring det er sket i huset. f.eks "Stue lyd: OFF"
+* Et 'stort display' der skal vise nogle live ændring det sker i huset. f.eks "Temperatur & Hum"
 
 <p>
 <br/>

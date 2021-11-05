@@ -232,36 +232,28 @@ void loop()
 	
 	Wire.requestFrom(4, 7);		// request 6 bytes from slave device #4
 
-	String keyword =  "";
+	int keyNumber = 0;
+	//String keyword =  "";
 	// slave may send less than requested
-	while (Wire.available()) 
-	{ 
-		char request_c = Wire.read();		// receive a byte as character
-		keyword += request_c;
-	}
-	keyword += Wire.read();        // receive byte as an integer
+	//while (Wire.available()) 
+	//{ 
+		//char request_c = Wire.read();		// receive a byte as character
+		//keyword += request_c;
+	//}
+	keyNumber = Wire.read();        // receive byte as an integer
 	
 	// Removes the last char in the received string
-	 keyword = keyword.substring(0, keyword.length() - 1);
+	//keyword = keyword.substring(0, keyword.length() - 1);
 	 
-	 Serial.println(keyword);
+	 Serial.println(keyNumber);
 	 
 	// Verify incoming data
-	if (keyword == "TOGGLE")
+	if (keyNumber == 42)
 	{
 		// toggle servo position
 		moveServo();
 	}
-	if (keyword == "42")
-	{
-		// toggle servo position
-		moveServo();
-	}
-	if (keyword == "69")
-	{
-		// toggle servo position
-		moveServo();
-	}
+
 
 #pragma endregion Master Receiver/Slave Writer
 

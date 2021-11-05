@@ -3,7 +3,7 @@
 #include <WiFiNINA.h>               // Enables Wi-Fi
 #include <WiFi_secrets.h>           // Wi-Fi credentials
 #include <thingspeak._secrets.h>    // thingspeak API and MQTT credentials
-#include "ThingSpeak.h"             // Bruger dette til at ThingSpeak API
+#include "ThingSpeak.h"             // Bruger dette til ThingSpeak API
 //#include <MQTT.h>                   // Jeg bruger dette til at hente data ned for ThingSpeak
 
 
@@ -146,9 +146,12 @@ void sendDataToThingspeak()
 // this function is registered as an event, see setup()
 void sendDataEvent() 
 {
-  // temp code to marster
-  //Wire.write("TOGGLE"); // respond with message of 7 bytes
+  Serial.println("Getting data from ThingSpeak...");
 
-  // // get data from a Thingspeak field
-  // ThingSpeak.readStringField(Channel_ID, 3, myReadAPIKey);
+  // Get data from a Thingspeak field 3
+  int keyNumber = ThingSpeak.readIntField(Channel_ID, 3, myReadAPIKey);
+
+  Serial.println("Sending data to marster.");
+
+  Wire.write(keyNumber);
 }
