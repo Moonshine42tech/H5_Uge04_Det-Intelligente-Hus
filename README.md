@@ -119,7 +119,8 @@ Denne del af dokumentet viser dig de forskellige "guides", til hvordan du setter
 Thingspeak er systemets 'Broker' og står for alt pub/sub routing i systemet. 
 For at sette thingspeak ordenligt op så bør du først læse denne guide, der forteller dig hvad du behøver og hvordan der gøres. <br/> 
 
-[Setup Guide](Dokumenter/Setup-thingspeak.rtf)
+>Dokumenter/Setup-thingspeak.rtf
+
 
 <p>
 <br/>
