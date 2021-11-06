@@ -24,7 +24,7 @@
         * [Android Mobil Client](#Android-Mobil-Client---MQTT-Test)
 * [Hardware](#Hardware)
     * [Hardware Componenter](#Hardware-Componenter)
-    * [Tilkobling / Pinout](#Tilkobling-/-Pinout)
+    * [Pinout Diagram](#Pinout-Diagram)
 * [Anerkendelse](#Anerkendelse)
 
 <p>
@@ -175,7 +175,7 @@ Til dette project bruges der følgene hardware Componenter. <br/>
 <br/>
 </p>
 
-## Tilkobling / Pinout
+## Pinout Diagram
 <br/>
 <div align="center">
   <img src="Billeder/Det Intiligente Hus - Pinout Diagram.png" alt="Floor plan">
