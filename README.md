@@ -33,7 +33,7 @@
 
 # Introduktion
 
-Det intelligente hus er en simplificeret repræsentation af hvad der er muligt at lave med embeded programmering og IoT. Dette project er en skole opgave, som i teorien godt ville kunne inplementeres i et rigtigt home. 
+Det intelligente hus er en simplificeret repræsentation af hvad der er muligt at lave med embeded programmering og IoT. Dette project er en skole opgave, som i teorien godt ville kunne inplementeres i et rigtigt hjem. 
 
 <p>
 <br/>
@@ -51,7 +51,7 @@ Det intiligente hus er et skoleproject der har til formål at vise underviseren 
 
 * Der vil ikke blive inplimenteret en fysisk menu function i dette project, da der er sat fokus på at dette intelligente hus, kun skal kunne styres via en app. <br/>(appen kommer på et senere fag).
 
-* Dette project har taget udgangspunkt i at bruge følgene teknologier til komunikation. 
+* Dette project har taget udgangspunkt i at bruge følgene teknologier, til komunikation. 
     * MQTT 
     * SPI (Serial Peripheral Interface)
     * I2C (Inter-Integrated Circuit) / TWI (Two Wire Interface)
@@ -64,22 +64,22 @@ Det intiligente hus er et skoleproject der har til formål at vise underviseren 
 
 # Functionelle og non-functionelle krav
 
-lav et "proof of concept" der kan demonstrere følgene krav. 
+Der skal laves et "proof of concept" der kan demonstrere følgene krav. 
 
 * Fjernstyring af forskellige funktioner.
 
-    * Huset skal have midst en alarm og alle alarmer skal kunne deaktiveres både trådløst over MQTT og ved fysist at trykke på en knap.
+    * Huset skal have midst en alarm og alle alarmer skal kunne deaktiveres både trådløst (over MQTT) og ved fysist at scanne et kort/chip.
 
     * Termustat: 
-        * Temperature og Humidity skal sendes fra et 'board' til et andet 'board'. 
-        * Temperature og Humidity målinger skal sendes op til 'thingspeak'
+        * Temperature og Luftfugtighed skal sendes fra et 'board' til et andet 'board'. 
+        * Temperature og Luftfugtigheds målinger skal sendes op til 'thingspeak'
 
     * Hoveddøren: <br/>
         * En RFID kort/chip skal fungere som en nøjle til huset. 
-        * En servo motor skal vise døren der åbner/lukker.
-        * Døren skal kunne styres både trådløst (via MQTT) og via RFID kort/chip
+        * En servo motor skal vise om døren er åben/lukket.
+        * Dørens lås skal kunne styres både trådløst (via MQTT) og via RFID kort/chip
 
-* Et 'stort display' der skal vise nogle live ændring det sker i huset. f.eks "Temperatur & Hum"
+* Et 'stort display' der skal vise nogle live ændring det sker i huset. f.eks "Temperatur og Luftfugtighed". 
 
 <p>
 <br/>
@@ -87,8 +87,9 @@ lav et "proof of concept" der kan demonstrere følgene krav.
 
 ## Fremtidige kvav 
 
-* Opsamlet data skal, i 'App Programmering 3' faget, kunne præseteres i en mobil app.
-* Der skal laves en menu i 'App Programmering 3' faget, så projectet kan styres via en mobil app.
+* App
+    * Opsamlet data (Fra Thingspeak) skal kunne hentes og præseteres.
+    * Der skal være en menu i appen, så huset kan styres via appen.
 
 <p>
 <br/>
