@@ -118,7 +118,7 @@ Dokumenter/Setup thingspeak.rtf
 <p>
 <br/>
 </p>
-
+ 
 ### MQTTX - Computer Client
 An Elegant Cross-platform MQTT 5.0 Desktop Client<br/>
 
@@ -139,29 +139,44 @@ An Elegant Cross-platform MQTT 5.0 Desktop Client<br/>
 </p>
 
 # Hardware
-...............<br/>
-......................<br/>
+Hardware er en vigtig del af et hvert embeded system. Så her uder vises alt fra vilket dele der er brugt i systemet, til hvordan det hele er sat sammen. 
 
 <p>
 <br/>
 </p>
 
 ## Hardware Componenter
-Til dette project bruges der følgene hardware <br/>
+Til dette project bruges der følgene hardware Componenter. <br/>
 
-* Udviklings board
+* Udviklings boards
     * Atmel Mega 2560
     * MKR WIFI 1010
-* Sensore
+* Programmer 
+    * Atmel-ICE
+* Modules
     * DHT11 (temperatur og luftfugtighed)
+    * RC522 RFID Module
+    * Logic Level Bidirectional module
+    * LCD Backpack Modul
+    * Buzzer
+* Displays 
+    * LCD Display 1602, I2C
+* Motors 
+    * SG90 Mikro Servo
+* Other components
+    * 2x LEDs
+    * 2x 220 ohm resistor
+
 
 <p>
 <br/>
 </p>
 
-## Tilkobling Pinout
-...............<br/>
-......................<br/>
+## Tilkobling / Pinout
+<br/>
+<div align="center">
+  <img src="Billeder/Det Intiligente Hus - Pinout Diagram.png" alt="Floor plan">
+</div><br/>
 
 <p>
 <br/><br/>
@@ -170,8 +185,6 @@ Til dette project bruges der følgene hardware <br/>
 
 # Anerkendelse
 
-Dette project eksistere grundet disse menesker:
-
 * [Kasper Jacobsen](https://github.com/Moonshine42tech)
-* [Egon Rasmussen](https://github.com/EgonRasmussen)
+
 
