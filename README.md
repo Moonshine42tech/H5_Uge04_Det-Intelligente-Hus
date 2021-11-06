@@ -25,6 +25,7 @@
 * [Hardware](#Hardware)
     * [Hardware Componenter](#Hardware-Componenter)
     * [Pinout Diagram](#Pinout-Diagram)
+* [Video Præsentation](#Video-Præsentation)
 * [Anerkendelse](#Anerkendelse)
 
 <p>
@@ -97,28 +98,29 @@ Der skal laves et "proof of concept" der kan demonstrere følgene krav.
 
 # Brugsvejledning
 
-Intil 'App Programmering 3' faget starter. vil alle fjernstyret User-Interfaces/componenter blive styret via en eller flere MQTT clienter. 
+Intil 'App Programmering 3' faget starter. vil alle fjernstyret User-Interfaces/componenter blive styret via en eller flere MQTT/API clienter. 
 
-Disse kontrol functioer vil senere blive inplementeret ind i en app for lettere brug og kontrol.
+Disse clienter vil senere blive erstattet med en app, for bedre brugervenlighed og kontrol.
 
 <p>
 <br/>
 </p>
 
 ## Setup
-..................<br/>
-.............<br/>
+Når du cloner dette project skal du først sette Thingspeak op, samt en eller flere clienter. 
+
+Denne del af dokumentet viser dig de forskellige "guides", til hvordan du setter de forskelloge ting op.
 
 <p>
 <br/>
 </p>
 
 ### Thingspeak
-Thingspeak er systemets 'Broker' og står for alt routing i systemet. 
+Thingspeak er systemets 'Broker' og står for alt pub/sub routing i systemet. 
 For at sette thingspeak ordenligt op så bør du først læse denne guide, der forteller dig hvad du behøver og hvordan der gøres. <br/> 
-```
-Dokumenter/Setup thingspeak.rtf
-```
+
+[Setup Guide](Dokumenter/Setup-thingspeak.rtf)
+
 <p>
 <br/>
 </p>
@@ -126,20 +128,23 @@ Dokumenter/Setup thingspeak.rtf
 ### Computer Client - MQTTX
 An Elegant Cross-platform MQTT 5.0 Desktop Client<br/>
 
-[Find programmet her!](https://mqttx.app/)
+[Find programmet her!](https://mqttx.app/)<br/>
+[Setup Guide](https://mqttx.app/docs)
 
 <p>
-<br/><br/>
+<br/>
 </p>
 
 
 ### Android Mobil Client - MQTT Test
 'MQTT Test' bruger MQTT Client protokol til at forbinde MQTT server. Du kan blant andet oprette 3 forbindelser for at forbinde 3 forskellige servere på samme tid, og grænsefladen er intuitiv.<br/>
 
-[Find appen her!](https://play.google.com/store/apps/details?id=org.thinhlt.mqtttesttool&hl=da&gl=US)
+[Find appen her!](https://play.google.com/store/apps/details?id=org.thinhlt.mqtttesttool&hl=da&gl=US)<br/>
+[Setup Guide](https://play.google.com/store/apps/details?id=org.thinhlt.mqtttesttool&hl=da&gl=US)
+
 
 <p>
-<br/>
+<br/><br/>
 </p>
 
 # Hardware
@@ -186,6 +191,13 @@ Til dette project bruges der følgene hardware Componenter. <br/>
 <br/><br/>
 </p>
 
+# Video Præsentation
+
+https://youtu.be/xV4eB2DHPKI
+
+<p>
+<br/>
+</p>
 
 # Anerkendelse
 
