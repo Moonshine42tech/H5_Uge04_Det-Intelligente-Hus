@@ -126,8 +126,9 @@ Dokumenter/Setup thingspeak.rtf
 ### Computer Client - MQTTX
 An Elegant Cross-platform MQTT 5.0 Desktop Client<br/>
 
-[Find programmet her!](https://mqttx.app/)
+[Find programmet her!](https://mqttx.app/){:target="_blank"}
 
+[link](url){:target="_blank"}
 <p>
 <br/><br/>
 </p>
