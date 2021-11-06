@@ -121,6 +121,7 @@ For at sette thingspeak ordenligt op så bør du først læse denne guide, der f
 
 >Dokumenter/Setup-thingspeak.rtf
 
+[Find hjemmesiden her!](https://thingspeak.com/)
 
 <p>
 <br/>
