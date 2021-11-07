@@ -102,7 +102,7 @@ Der skal laves et "proof of concept" der kan demonstrere følgene krav.
 
 # Brugsvejledning
 
-Denne del af dokumentet viser dig hvordan du kommer igang med at bruge dette project. Der er linket til guides til hver af de individuelle eksterne programmer. 
+Denne del af dokumentet viser dig hvordan du kommer igang med at bruge dette project. 
 
 <p>
 <br/>
