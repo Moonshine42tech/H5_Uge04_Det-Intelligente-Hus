@@ -59,6 +59,10 @@ Det intiligente hus er et skoleproject der har til formål at vise underviseren 
     * Seriel datakommunikation 
     * Wi-Fi
 
+* Intil faget 'App Programmering 3' starter. vil alle fjernstyret User-Interfaces/componenter blive styret via en eller flere MQTT/API clienter. 
+
+    Disse clienter vil senere blive erstattet med en app, for bedre brugervenlighed og kontrol.
+
 <p>
 <br/>
 </p>
@@ -98,9 +102,7 @@ Der skal laves et "proof of concept" der kan demonstrere følgene krav.
 
 # Brugsvejledning
 
-Intil 'App Programmering 3' faget starter. vil alle fjernstyret User-Interfaces/componenter blive styret via en eller flere MQTT/API clienter. 
-
-Disse clienter vil senere blive erstattet med en app, for bedre brugervenlighed og kontrol.
+Denne del af dokumentet viser dig hvordan du kommer igang med at bruge dette project. Der er linket til guides til hver af de individuelle eksterne programmer. 
 
 <p>
 <br/>
