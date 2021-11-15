@@ -51,7 +51,7 @@ void setup()
 
 #pragma endregion Wi-Fi
 
-  ThingSpeak.begin(client);  //Initialize ThingSpeak
+  ThingSpeak.begin(client);           // Initialize ThingSpeak
 }
 
 void loop() 
@@ -76,17 +76,28 @@ void loop()
 
 #pragma region write to the ThingSpeak channel
 
-  // Set ThingSpeak Fields
-  ThingSpeak.setField(1, DHT11_Temperature);
-  ThingSpeak.setField(2, DHT11_Humidity);
+  int counter = 0;
+  if (counter == 300000) // 300.000 = 5 min.
+  { 
 
-  delay(500);
-  // write to the ThingSpeak channel
-  sendDataToThingspeak();
+    // Set ThingSpeak Fields
+    ThingSpeak.setField(1, DHT11_Temperature);
+    ThingSpeak.setField(2, DHT11_Humidity);
 
+    delay(500);
+    // write to the ThingSpeak channel
+    sendDataToThingspeak();
+
+    counter = 0;        // reset counter
+  }
+  else 
+  {
+    counter += 1000;    // 1000 = 1 sec.
+  }
+  
 #pragma endregion write to the ThingSpeak channel
 
-  delay(10000); // loop every 10 sec.
+  delay(1000); // loop every 1 sec.
 }
 
 
