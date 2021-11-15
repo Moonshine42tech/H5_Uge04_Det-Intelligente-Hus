@@ -85,6 +85,7 @@ void loop()
     ThingSpeak.setField(2, DHT11_Humidity);
 
     delay(500);
+
     // write to the ThingSpeak channel
     sendDataToThingspeak();
 
