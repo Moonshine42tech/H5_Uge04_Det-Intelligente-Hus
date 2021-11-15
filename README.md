@@ -20,8 +20,12 @@
 * [Brugsvejledning](#Brugsvejledning)
     * [Setup](#Setup)
         * [Thingspeak](#Thingspeak)
-        * [Computer Client](#MQTTX---Computer-Client)
-        * [Android Mobil Client](#MQTT-Test---Android-Mobil-Client)
+        * [Computer Client](#Computer-Client---MQTTX)
+        * [Android Mobil Client](#Android-Mobil-Client---MQTT-Test)
+* [Hardware](#Hardware)
+    * [Hardware Componenter](#Hardware-Componenter)
+    * [Pinout Diagram](#Pinout-Diagram)
+* [Video Præsentation](#Video-Præsentation)
 * [Anerkendelse](#Anerkendelse)
 
 <p>
@@ -30,7 +34,7 @@
 
 # Introduktion
 
-Det intelligente hus er en simplificeret repræsentation af hvad der er muligt at lave med embeded programmering og IoT. Dette project er en skole opgave, som i teorien godt ville kunne inplementeres i et rigtigt home. 
+Det intelligente hus er en simplificeret repræsentation af hvad der er muligt at lave med embeded programmering og IoT. Dette project er en skole opgave, som i teorien godt ville kunne inplementeres i et rigtigt hjem. 
 
 <p>
 <br/>
@@ -48,12 +52,16 @@ Det intiligente hus er et skoleproject der har til formål at vise underviseren 
 
 * Der vil ikke blive inplimenteret en fysisk menu function i dette project, da der er sat fokus på at dette intelligente hus, kun skal kunne styres via en app. <br/>(appen kommer på et senere fag).
 
-* Dette project har taget udgangspunkt i at bruge følgene teknologier til komunikation. 
+* Dette project har taget udgangspunkt i at bruge følgene teknologier, til komunikation. 
     * MQTT 
     * SPI (Serial Peripheral Interface)
     * I2C (Inter-Integrated Circuit) / TWI (Two Wire Interface)
     * Seriel datakommunikation 
     * Wi-Fi
+
+* Intil faget 'App Programmering 3' starter. vil alle fjernstyret User-Interfaces/componenter blive styret via en eller flere MQTT/API clienter. 
+
+    Disse clienter vil senere blive erstattet med en app, for bedre brugervenlighed og kontrol.
 
 <p>
 <br/>
@@ -61,22 +69,22 @@ Det intiligente hus er et skoleproject der har til formål at vise underviseren 
 
 # Functionelle og non-functionelle krav
 
-lav et "proof of concept" der kan demonstrere følgene krav. 
+Der skal laves et "proof of concept" der kan demonstrere følgene krav. 
 
 * Fjernstyring af forskellige funktioner.
 
-    * Huset skal have midst en alarm og alle alarmer skal kunne deaktiveres både trådløst over MQTT og ved fysist at trykke på en knap.
+    * Huset skal have midst en alarm og alle alarmer skal kunne deaktiveres både trådløst (over MQTT) og ved fysist at scanne et kort/chip.
 
     * Termustat: 
-        * Temperature og Humidity skal sendes fra et 'board' til et andet 'board'. 
-        * Temperature og Humidity målinger skal sendes op til 'thingspeak'
+        * Temperature og Luftfugtighed skal sendes fra et 'board' til et andet 'board'. 
+        * Temperature og Luftfugtigheds målinger skal sendes op til 'thingspeak'
 
     * Hoveddøren: <br/>
         * En RFID kort/chip skal fungere som en nøjle til huset. 
-        * En servo motor skal vise døren der åbner/lukker.
-        * Døren skal kunne styres både trådløst (via MQTT) og via RFID kort/chip
+        * En servo motor skal vise om døren er åben/lukket.
+        * Dørens lås skal kunne styres både trådløst (via MQTT) og via RFID kort/chip
 
-* Et 'stort display' der skal vise nogle live ændring det sker i huset. f.eks "Temperatur & Hum"
+* Et 'stort display' der skal vise nogle live ændring det sker i huset. f.eks "Temperatur og Luftfugtighed". 
 
 <p>
 <br/>
@@ -84,8 +92,9 @@ lav et "proof of concept" der kan demonstrere følgene krav.
 
 ## Fremtidige kvav 
 
-* Opsamlet data skal, i 'App Programmering 3' faget, kunne præseteres i en mobil app.
-* Der skal laves en menu i 'App Programmering 3' faget, så projectet kan styres via en mobil app.
+* App
+    * Opsamlet data (Fra Thingspeak) skal kunne hentes og præseteres.
+    * Der skal være en menu i appen, så huset kan styres via appen.
 
 <p>
 <br/>
@@ -93,85 +102,109 @@ lav et "proof of concept" der kan demonstrere følgene krav.
 
 # Brugsvejledning
 
-Intil 'App Programmering 3' faget starter. vil alle fjernstyret User-Interfaces/componenter blive styret via en eller flere MQTT clienter. 
-
-Disse kontrol functioer vil senere blive inplementeret ind i en app for lettere brug og kontrol.
+Denne del af dokumentet viser dig hvordan du kommer igang med at bruge dette project. 
 
 <p>
 <br/>
 </p>
 
 ## Setup
-..................<br/>
-.............<br/>
+Når du cloner dette project skal du først sette Thingspeak op, samt en eller flere clienter. 
+
+Denne del af dokumentet viser dig de forskellige "guides", til hvordan du setter de forskelloge ting op.
 
 <p>
 <br/>
 </p>
 
 ### Thingspeak
-Thingspeak er systemets 'Broker' og står for alt routing i systemet. 
+Thingspeak er systemets 'Broker' og står for alt pub/sub routing i systemet. 
 For at sette thingspeak ordenligt op så bør du først læse denne guide, der forteller dig hvad du behøver og hvordan der gøres. <br/> 
-```
-Dokumenter/Setup thingspeak.rtf
-```
+
+>Dokumenter/Setup-thingspeak.rtf
+
+[Find hjemmesiden her!](https://thingspeak.com/)
+
+<p>
+<br/>
+</p>
+ 
+### Computer Client - MQTTX
+An Elegant Cross-platform MQTT 5.0 Desktop Client<br/>
+
+[Find programmet her!](https://mqttx.app/)<br/>
+[Setup Guide](https://mqttx.app/docs)
+
 <p>
 <br/>
 </p>
 
-### MQTTX - Computer Client
-An Elegant Cross-platform MQTT 5.0 Desktop Client<br/>
 
-[Find programmet her!](https://mqttx.app/)
+### Android Mobil Client - MQTT Test
+'MQTT Test' bruger MQTT Client protokol til at forbinde MQTT server. Du kan blant andet oprette 3 forbindelser for at forbinde 3 forskellige servere på samme tid, og grænsefladen er intuitiv.<br/>
+
+[Find appen her!](https://play.google.com/store/apps/details?id=org.thinhlt.mqtttesttool&hl=da&gl=US)<br/>
+[Setup Guide](https://play.google.com/store/apps/details?id=org.thinhlt.mqtttesttool&hl=da&gl=US)
+
 
 <p>
 <br/><br/>
 </p>
 
-
-### MQTT Test - Android Mobil Client
-'MQTT Test' bruger MQTT Client protokol til at forbinde MQTT server. Du kan blant andet oprette 3 forbindelser for at forbinde 3 forskellige servere på samme tid, og grænsefladen er intuitiv.<br/>
-
-[Find appen her!](https://play.google.com/store/apps/details?id=org.thinhlt.mqtttesttool&hl=da&gl=US)
-
-<p>
-<br/>
-</p>
-
 # Hardware
-...............<br/>
-......................<br/>
+Hardware er en vigtig del af et hvert embeded system. Så her uder vises alt fra vilket dele der er brugt i systemet, til hvordan det hele er sat sammen. 
 
 <p>
 <br/>
 </p>
 
 ## Hardware Componenter
-Til dette project bruges der følgene hardware <br/>
+Til dette project bruges der følgene hardware Componenter. <br/>
 
-* Udviklings board
+* Udviklings boards
     * Atmel Mega 2560
     * MKR WIFI 1010
-* Sensore
+* Programmer 
+    * Atmel-ICE
+* Modules
     * DHT11 (temperatur og luftfugtighed)
+    * RC522 RFID Module
+    * Logic Level Bidirectional module
+    * LCD Backpack Modul
+    * Buzzer
+* Displays 
+    * LCD Display 1602, I2C
+* Motors 
+    * SG90 Mikro Servo
+* Other components
+    * 2x LEDs
+    * 2x 220 ohm resistor
+
 
 <p>
 <br/>
 </p>
 
-## Tilkobling Pinout
-...............<br/>
-......................<br/>
+## Pinout Diagram
+<br/>
+<div align="center">
+  <img src="Billeder/Det Intiligente Hus - Pinout Diagram.png" alt="Floor plan">
+</div><br/>
 
 <p>
 <br/><br/>
 </p>
 
+# Video Præsentation
+
+https://youtu.be/xV4eB2DHPKI
+
+<p>
+<br/>
+</p>
 
 # Anerkendelse
 
-Dette project eksistere grundet disse menesker:
-
 * [Kasper Jacobsen](https://github.com/Moonshine42tech)
-* [Egon Rasmussen](https://github.com/EgonRasmussen)
+
 
