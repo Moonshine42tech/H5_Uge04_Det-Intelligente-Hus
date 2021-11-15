@@ -21,6 +21,7 @@ WiFiClient client;
 unsigned long myChannelNumber = Channel_ID;
 const char * myWriteAPIKey = Write_API_Key;
 const char * myReadAPIKey = Read_API_Key;
+int counter = 0;
 
 #pragma endregion thingspeak
 
@@ -76,7 +77,6 @@ void loop()
 
 #pragma region write to the ThingSpeak channel
 
-  int counter = 0;
   if (counter == 300000) // 300.000 = 5 min.
   { 
 
@@ -94,6 +94,7 @@ void loop()
   else 
   {
     counter += 1000;    // 1000 = 1 sec.
+    //Serial.println(counter);
   }
   
 #pragma endregion write to the ThingSpeak channel
