@@ -77,8 +77,9 @@ void loop()
 
 #pragma region write to the ThingSpeak channel
 
-  if (counter == 300000) // 300.000 = 5 min.
+  if (counter >= 30000) 
   { 
+    counter = 0;        // reset counter
 
     // Set ThingSpeak Fields
     ThingSpeak.setField(1, DHT11_Temperature);
@@ -88,13 +89,11 @@ void loop()
 
     // write to the ThingSpeak channel
     sendDataToThingspeak();
-
-    counter = 0;        // reset counter
   }
   else 
   {
-    counter += 1000;    // 1000 = 1 sec.
-    //Serial.println(counter);
+    counter += 1500;    
+    Serial.println(counter);
   }
   
 #pragma endregion write to the ThingSpeak channel
