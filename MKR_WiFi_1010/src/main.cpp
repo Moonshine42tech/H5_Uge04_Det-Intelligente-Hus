@@ -77,7 +77,7 @@ void loop()
 
 #pragma region write to the ThingSpeak channel
 
-  if (counter >= 30000) 
+  if (counter >= 300000) 
   { 
     counter = 0;        // reset counter
 
