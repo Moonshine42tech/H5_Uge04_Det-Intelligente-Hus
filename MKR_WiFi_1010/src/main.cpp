@@ -11,7 +11,15 @@
 void receiveDataEvent(int howMany);
 void sendDataEvent();
 void sendDataToThingspeak();
+void IsInFunction();
+void IsInLoop();
 
+#pragma region LEDs for bug control
+
+int const Green_Led_Pin5 = 5;
+int const Blue_Led_Pin4 = 4;
+
+#pragma endregion LEDs for bug control
 
 WiFiClient client;
 
@@ -53,6 +61,16 @@ void setup()
 #pragma endregion Wi-Fi
 
   ThingSpeak.begin(client);           // Initialize ThingSpeak
+
+#pragma region LEDs for bug control
+
+  pinMode(Green_Led_Pin5, OUTPUT);    // Green LED
+  pinMode(Blue_Led_Pin4, OUTPUT);    // BLUE LED
+
+  digitalWrite(Green_Led_Pin5, LOW);   // Turn off from start
+  digitalWrite(Blue_Led_Pin4, LOW);   // Turn off from start
+
+#pragma endregion LEDs for bug control
 }
 
 void loop() 
@@ -77,7 +95,7 @@ void loop()
 
 #pragma region write to the ThingSpeak channel
 
-  if (counter >= 300000) 
+  if (counter == 240) // 240 loop cykels if 1 sec per loop, then 240 = 4 minutes
   { 
     counter = 0;        // reset counter
 
@@ -92,7 +110,7 @@ void loop()
   }
   else 
   {
-    counter += 1500;    
+    counter += 1; 
     Serial.println(counter);
   }
   
@@ -106,6 +124,8 @@ void loop()
 // this function is registered as an event, see setup()
 void receiveDataEvent(int howMany)
 {
+  IsInFunction();
+
   String keyword =  "";
 
   while(1 < Wire.available()) // loop through all but the last
@@ -136,12 +156,16 @@ void receiveDataEvent(int howMany)
     // send x to thingspeak
     DHT11_Humidity = x;
   }
+
+  IsInLoop();
 }
 
 
 // A function that writes to filds in a ThingSpeak channel
 void sendDataToThingspeak() 
 {
+  IsInFunction();
+
   delay(100);
   // write to the ThingSpeak channel
   int x = ThingSpeak.writeFields(myChannelNumber, myWriteAPIKey);
@@ -151,6 +175,8 @@ void sendDataToThingspeak()
   else{
     Serial.println("Problem updating channel. HTTP error code " + String(x));
   }
+
+  IsInLoop();
 }
 
 
@@ -158,6 +184,8 @@ void sendDataToThingspeak()
 // this function is registered as an event, see setup()
 void sendDataEvent() 
 {
+  IsInFunction();
+
   Serial.println("Getting data from ThingSpeak...");
 
   // Get data from a Thingspeak field 3
@@ -166,4 +194,25 @@ void sendDataEvent()
   Serial.println("Sending data to marster.");
 
   Wire.write(keyNumber);
+
+  IsInLoop();
+}
+
+
+// used as an visuel progres indicator for debugging 
+void IsInLoop() 
+{
+  // gleen led on 
+  // blue led off
+  digitalWrite(Green_Led_Pin5, HIGH);
+  digitalWrite(Blue_Led_Pin4, LOW); 
+}
+
+// used as an visuel progres indicator for debugging 
+void IsInFunction() 
+{
+  // gleen led off 
+  // blue led on
+  digitalWrite(Green_Led_Pin5, LOW);
+  digitalWrite(Blue_Led_Pin4, HIGH); 
 }
